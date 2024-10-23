@@ -21,7 +21,7 @@ namespace SpecflowTest
         public void WhenTheUserClicksToCheckoutAndAddsInfo(Table table)
         {
             UserCheckoutInfo userCheckoutInfo = table.CreateInstance<UserCheckoutInfo>();
-            Console.WriteLine(userCheckoutInfo.lastName);
+            Console.WriteLine("LastName: " + userCheckoutInfo.lastName);
 
             foreach (TableRow row in table.Rows)
             {

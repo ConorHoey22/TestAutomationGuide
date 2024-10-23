@@ -4,7 +4,11 @@ Selenium , SpecFlow , C#
 
 Create a new Project (NUnit Project)
 
-Install Nuget Packages SpecFlow SpecFlow.NUnit Webdriver Manager Selenium Webdriver Selenium Support
+Install Nuget Packages -> 
+SpecFlow SpecFlow.NUnit 
+Webdriver Manager 
+Selenium Webdriver 
+Selenium Support
 
 Right click -> Add an Item -> SpecFlow Configuration
 

@@ -128,10 +128,28 @@ Next create a Resources Folder and within that folder create the a applicationCo
 Create folders 
 
 DataSet
+
 Result - will have report of executed testcases with logs to debug failed testcases
+
 TestCases - this folder will be used to place all testscripts and framework engine will target to execute testcases.
+
 frameworkSetting.json file is having information related framework environment
+
 applicationRegionSettings.json will be saving all the information related to application environments. 
+
+
+----- CUSTOM EXCEPTIONS ----
+
+Create 2 new classes
+
+![image](https://github.com/user-attachments/assets/f07ed3a5-444a-45e4-b788-f5ebb6f5660e)
+
+AutomationException
+
+![image](https://github.com/user-attachments/assets/dbdda0bd-0c3f-4311-8787-00128c341230)
+
+Error Items stored as Enums
+![image](https://github.com/user-attachments/assets/c1b8f190-567b-4e48-af66-c2aa99b6b49b)
 
 
 

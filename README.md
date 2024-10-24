@@ -128,8 +128,11 @@ Next create a Resources Folder and within that folder create the a applicationCo
 Create folders 
 
 DataSet
-Result
-TestCases
+Result - will have report of executed testcases with logs to debug failed testcases
+TestCases - this folder will be used to place all testscripts and framework engine will target to execute testcases.
+frameworkSetting.json file is having information related framework environment
+applicationRegionSettings.json will be saving all the information related to application environments. 
+
 
 
 

@@ -121,8 +121,15 @@ install Nugets packages to the project
 
 Specflow NUnit and then delete Nunit in the dependencies as will be using specflow.Nunit 
 
+Next create a Resources Folder and within that folder create the a applicationConfig.json + FrameworkSettings.json#
 
+![image](https://github.com/user-attachments/assets/a0b339a6-794c-4f1b-8796-68adcec5bd6a)
 
+Create folders 
+
+DataSet
+Result
+TestCases
 
 
 

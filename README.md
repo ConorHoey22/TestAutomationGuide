@@ -107,3 +107,23 @@ Another way to obtain data from the Table Rows is by using a foreach to iterate 
 ![image](https://github.com/user-attachments/assets/e7144647-4036-448a-a757-d8d9c27499ba)
 
 // There is also ways to Create/compare tables and its sets by using .CompareToSet
+
+
+
+---------------------------------- CREATING A TEST AUTOMATION FRAMEWORK -----------------------------------------------------
+
+
+Create a 3 new Projects 
+
+![image](https://github.com/user-attachments/assets/19b2cb7c-fbd6-48f3-8076-762806a111d8)
+
+install Nugets packages to the project 
+
+Specflow NUnit and then delete Nunit in the dependencies as will be using specflow.Nunit 
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------

@@ -159,14 +159,42 @@ Error Items stored as Enums
 Create a new folder within WebUI project and call it Reports.
 
 Create a new class called Logging
-Download the nuget package - Serilog and Serilog.Sinks.File , Serilog.Enrichers.Thread
-
+Download the nuget package - Serilog and Serilog.Sinks.File , Serilog.Enrichers.Thread ,
 
 Create a constuctor of logging 
 
 use Log.Logger to create the Object and define the level and controlledBy 
 
 define out LoggingLevelSwitch which is then used to call out framework settings from Framework.json 
+
+
+Define logginglevels - Create a method for each Log - Warning, Fatal , Error , Debug and Information 
+![image](https://github.com/user-attachments/assets/ca956b9f-c4fd-4913-b0bd-a538c3829ad2)
+
+using a Switch we can now call each of these methods when needed
+
+![image](https://github.com/user-attachments/assets/e405ced1-a599-45ae-a470-32864941ab72)
+
+Create a new folder within WebUI project and call its Params 
+
+Create a class called DefaultVariables 
+![image](https://github.com/user-attachments/assets/97d0a8ec-7aae-4636-8306-a56de78523e5)
+
+
+Within this class  , Create a getReport Method and GetLog Method 
+
+getReport will navigate to our Result\Report folder and when a new report is created itt will Timestamp it 
+getLog will create a new log.txt file within the report folder
+
+![image](https://github.com/user-attachments/assets/7c7748f0-f08b-4030-b55c-4f7f6fc76b2b)
+
+
+define the class DefaultVariables object within our constructor and then call the getLog method within the WriteTo.File Method which will then create a log .
+![image](https://github.com/user-attachments/assets/de1efc1d-d145-44f9-9f81-57dbf7c6458f)
+
+
+
+
 
 
 

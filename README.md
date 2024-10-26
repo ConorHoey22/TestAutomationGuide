@@ -159,7 +159,18 @@ Error Items stored as Enums
 Create a new folder within WebUI project and call it Reports.
 
 Create a new class called Logging
-Download the nuget package - Serilog
+Download the nuget package - Serilog and Serilog.Sinks.File , Serilog.Enrichers.Thread
+
+
+Create a constuctor of logging 
+
+use Log.Logger to create the Object and define the level and controlledBy 
+
+define out LoggingLevelSwitch which is then used to call out framework settings from Framework.json 
+
+
+
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------

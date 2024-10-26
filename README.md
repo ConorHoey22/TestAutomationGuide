@@ -139,6 +139,7 @@ applicationRegionSettings.json will be saving all the information related to app
 
 
 ----- CUSTOM EXCEPTIONS ----
+Create a new folder within WebUI project and call it CustomExceptions 
 
 Create 2 new classes
 
@@ -152,6 +153,13 @@ Error Items stored as Enums
 ![image](https://github.com/user-attachments/assets/c1b8f190-567b-4e48-af66-c2aa99b6b49b)
 
 
+
+------ Logging -----
+
+Create a new folder within WebUI project and call it Reports.
+
+Create a new class called Logging
+Download the nuget package - Serilog
 
 
 -------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,2 @@
+2024-10-27 01:23:57.438 +01:00 [WRN] There is a Warning here
+2024-10-27 01:23:57.444 +01:00 [INF] There is a informaion log here

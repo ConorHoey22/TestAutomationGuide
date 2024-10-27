@@ -139,7 +139,7 @@ applicationRegionSettings.json will be saving all the information related to app
 
 
 ----- CUSTOM EXCEPTIONS ----
-Create a new folder within WebUI project and call it CustomExceptions 
+Create a new folder within TestAutomationFramework.Core.WebUI project and call it CustomExceptions 
 
 Create 2 new classes
 
@@ -193,9 +193,7 @@ define the class DefaultVariables object within our constructor and then call th
 ![image](https://github.com/user-attachments/assets/de1efc1d-d145-44f9-9f81-57dbf7c6458f)
 
 
-
-
-
+Lastly we need to invoke out Logger within TestAutomationFramework.DemoUI.Test. We can do this by referencing our project which contains our Logger class. Right Click DemoUI.Test -> Project Reference -> select the project you want to reference and then type the class you want to reference press alt+Enter and import project
 
 
 

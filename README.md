@@ -107,3 +107,99 @@ Another way to obtain data from the Table Rows is by using a foreach to iterate 
 ![image](https://github.com/user-attachments/assets/e7144647-4036-448a-a757-d8d9c27499ba)
 
 // There is also ways to Create/compare tables and its sets by using .CompareToSet
+
+
+
+---------------------------------- CREATING A TEST AUTOMATION FRAMEWORK -----------------------------------------------------
+
+
+Create a 3 new Projects 
+
+![image](https://github.com/user-attachments/assets/19b2cb7c-fbd6-48f3-8076-762806a111d8)
+
+install Nugets packages to the project 
+
+Specflow NUnit and then delete Nunit in the dependencies as will be using specflow.Nunit 
+
+Next create a Resources Folder and within that folder create the a applicationConfig.json + FrameworkSettings.json#
+
+![image](https://github.com/user-attachments/assets/a0b339a6-794c-4f1b-8796-68adcec5bd6a)
+
+Create folders 
+
+DataSet
+
+Result - will have report of executed testcases with logs to debug failed testcases
+
+TestCases - this folder will be used to place all testscripts and framework engine will target to execute testcases.
+
+frameworkSetting.json file is having information related framework environment
+
+applicationRegionSettings.json will be saving all the information related to application environments. 
+
+
+----- CUSTOM EXCEPTIONS ----
+Create a new folder within TestAutomationFramework.Core.WebUI project and call it CustomExceptions 
+
+Create 2 new classes
+
+![image](https://github.com/user-attachments/assets/f07ed3a5-444a-45e4-b788-f5ebb6f5660e)
+
+AutomationException
+
+![image](https://github.com/user-attachments/assets/dbdda0bd-0c3f-4311-8787-00128c341230)
+
+Error Items stored as Enums
+![image](https://github.com/user-attachments/assets/c1b8f190-567b-4e48-af66-c2aa99b6b49b)
+
+
+
+------ Logging -----
+
+Create a new folder within WebUI project and call it Reports.
+
+Create a new class called Logging
+Download the nuget package - Serilog and Serilog.Sinks.File , Serilog.Enrichers.Thread ,
+
+Create a constuctor of logging 
+
+use Log.Logger to create the Object and define the level and controlledBy 
+
+define out LoggingLevelSwitch which is then used to call out framework settings from Framework.json 
+
+
+Define logginglevels - Create a method for each Log - Warning, Fatal , Error , Debug and Information 
+![image](https://github.com/user-attachments/assets/ca956b9f-c4fd-4913-b0bd-a538c3829ad2)
+
+using a Switch we can now call each of these methods when needed
+
+![image](https://github.com/user-attachments/assets/e405ced1-a599-45ae-a470-32864941ab72)
+
+Create a new folder within WebUI project and call its Params 
+
+Create a class called DefaultVariables 
+![image](https://github.com/user-attachments/assets/97d0a8ec-7aae-4636-8306-a56de78523e5)
+
+
+Within this class  , Create a getReport Method and GetLog Method 
+
+getReport will navigate to our Result\Report folder and when a new report is created itt will Timestamp it 
+getLog will create a new log.txt file within the report folder
+
+![image](https://github.com/user-attachments/assets/8332167d-6bdc-48a9-876a-d2c58ba701fc)
+
+
+
+define the class DefaultVariables object within our constructor and then call the getLog method within the WriteTo.File Method which will then create a log .
+![image](https://github.com/user-attachments/assets/de1efc1d-d145-44f9-9f81-57dbf7c6458f)
+
+
+Lastly we need to invoke out Logger within TestAutomationFramework.DemoUI.Test. We can do this by referencing our project which contains our Logger class. Right Click DemoUI.Test -> Project Reference -> select the project you want to reference and then type the class you want to reference press alt+Enter and import project
+
+After running our Unit test we can now see that the Results folder is populated with a log.txt file. Each time we get a new log it will be added to its own report folder like below.
+![image](https://github.com/user-attachments/assets/d13eb95a-fd2d-409d-aa63-8a2a5ba8a4da)
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------

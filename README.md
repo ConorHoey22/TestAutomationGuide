@@ -196,6 +196,8 @@ define the class DefaultVariables object within our constructor and then call th
 
 Lastly we need to invoke out Logger within TestAutomationFramework.DemoUI.Test. We can do this by referencing our project which contains our Logger class. Right Click DemoUI.Test -> Project Reference -> select the project you want to reference and then type the class you want to reference press alt+Enter and import project
 
+After running our Unit test we can now see that the Results folder is populated with a log.txt file. Each time we get a new log it will be added to its own report folder like below.
+![image](https://github.com/user-attachments/assets/d13eb95a-fd2d-409d-aa63-8a2a5ba8a4da)
 
 
 

@@ -186,7 +186,8 @@ Within this class  , Create a getReport Method and GetLog Method
 getReport will navigate to our Result\Report folder and when a new report is created itt will Timestamp it 
 getLog will create a new log.txt file within the report folder
 
-![image](https://github.com/user-attachments/assets/7c7748f0-f08b-4030-b55c-4f7f6fc76b2b)
+![image](https://github.com/user-attachments/assets/8332167d-6bdc-48a9-876a-d2c58ba701fc)
+
 
 
 define the class DefaultVariables object within our constructor and then call the getLog method within the WriteTo.File Method which will then create a log .

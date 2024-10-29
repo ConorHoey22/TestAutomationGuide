@@ -200,6 +200,33 @@ After running our Unit test we can now see that the Results folder is populated 
 ![image](https://github.com/user-attachments/assets/d13eb95a-fd2d-409d-aa63-8a2a5ba8a4da)
 
 
+---------------------------------------------------
 
+dependency injection  - Reuseable code and functionality
+
+install the nuget package -> Microsoft.Extensions.
+
+Create a new Folder called ContainerConfig within WebUI Project
+Within this folder , create a class called ContainerConfig.cs
+
+This class will create a container and user the service collection to request the object 
+![image](https://github.com/user-attachments/assets/5c652943-6f9c-4117-95d8-53981c6bfab6)
+
+Inheritance of Objects 
+We can inherit defaultVariable by adding the below 
+![image](https://github.com/user-attachments/assets/1dcd1517-acdc-4e26-a7fb-047deb937528)
+
+
+Create another Folder called Abstraction 
+Within this folder , create an interface called IDefaultVariables which will hold the function we would like to inherit/reuse thoughout our codebase
+
+![image](https://github.com/user-attachments/assets/4238d79e-00f1-4dbe-be57-6536c7381532)
+
+![image](https://github.com/user-attachments/assets/53dd16a1-1578-4c94-95f9-d4835df97c79)
+
+Now within Logging.cs we can no longer need to create an objec for defaultVariables ,. we can declare IdefaualtVariables by declareing it within Logging method and outside of ti which will allow us to use _idefaultVariables.getLog function 
 
 -------------------------------------------------------------------------------------------------------------------------------
+
+
+

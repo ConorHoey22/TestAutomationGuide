@@ -5,25 +5,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestAutomationFramework.Core.WebUI.Abstraction;
 using TestAutomationFramework.Core.WebUI.Params;
 
 namespace TestAutomationFramework.Core.WebUI.Reports
 {
-    public class Logging
+    public class Logging : ILogging
     {
 
         LoggingLevelSwitch _loggingLevelSwitch;
-
+        IDefaultVariables _idefaultVariables;
 
         //Create a constructor 
-        public Logging()
+        public Logging(IDefaultVariables idefaultVariables)
         {
 
-            DefaultVariables defaultVariables = new DefaultVariables();
+            //DefaultVariables defaultVariables = new DefaultVariables();
+            _idefaultVariables = idefaultVariables;
 
             _loggingLevelSwitch = new LoggingLevelSwitch(Serilog.Events.LogEventLevel.Debug);
             Log.Logger = new LoggerConfiguration().MinimumLevel.ControlledBy(_loggingLevelSwitch)
-            .WriteTo.File(defaultVariables.getLog, outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
+            .WriteTo.File(_idefaultVariables.getLog, outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
             .Enrich.WithThreadName().CreateLogger();
 
      

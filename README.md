@@ -202,7 +202,7 @@ After running our Unit test we can now see that the Results folder is populated 
 
 ---------------------------------------------------
 
-dependency injection  - Reuseable code and functionality
+Dependency injection  - Reuseable code and functionality - we can do the way above but for Coding standards and efficiently readable code we should use this
 
 install the nuget package -> Microsoft.Extensions.
 
@@ -224,7 +224,28 @@ Within this folder , create an interface called IDefaultVariables which will hol
 
 ![image](https://github.com/user-attachments/assets/53dd16a1-1578-4c94-95f9-d4835df97c79)
 
-Now within Logging.cs we can no longer need to create an objec for defaultVariables ,. we can declare IdefaualtVariables by declareing it within Logging method and outside of ti which will allow us to use _idefaultVariables.getLog function 
+Now within Logging.cs we can no longer need to create an object for defaultVariables , we can declare IdefaualtVariables by declaring it within Logging constructor and outside of ti which will allow us to use _idefaultVariables.getLog function 
+
+
+lets create an interface for our Logging class now 
+
+Create a class called ILogging in our Abstract class and declare the functions we want to inherit
+![image](https://github.com/user-attachments/assets/f1f324c1-148e-435c-b222-8e5f47c57cca)
+
+
+Inherit the Logging class
+![image](https://github.com/user-attachments/assets/0a28d2e0-f7ba-4dfc-81ca-9c97bd5de776)
+
+Add Logging to our service container
+![image](https://github.com/user-attachments/assets/3edc827d-746c-4c81-bf9c-efd1e49dddf6)
+
+
+We can then pass our logging object to our UnitTest , by declaring iserviceProvider which will use the ContainerConfig class and services method  
+![image](https://github.com/user-attachments/assets/3e7b3a31-09cd-4e22-9535-0373f6eeb6ef)
+
+
+
+
 
 -------------------------------------------------------------------------------------------------------------------------------
 

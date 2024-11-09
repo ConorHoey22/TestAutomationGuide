@@ -244,6 +244,18 @@ We can then pass our logging object to our UnitTest , by declaring iserviceProvi
 ![image](https://github.com/user-attachments/assets/3e7b3a31-09cd-4e22-9535-0373f6eeb6ef)
 
 
+----- CREATE A RUNNER --------
+
+Create a new folder called Runner 
+Create a new Class named SpecFlowRunner.cs
+
+Make the class public 
+Declare a function 
+Binding using e.g. [BeforeTestRun] and [Binding] the class
+![image](https://github.com/user-attachments/assets/033d4219-910c-4cf4-9890-c2851727f185)
+
+
+
 
 
 

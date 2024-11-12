@@ -251,8 +251,13 @@ Create a new Class named SpecFlowRunner.cs
 
 Make the class public 
 Declare a function 
+
 Binding using e.g. [BeforeTestRun] and [Binding] the class
-![image](https://github.com/user-attachments/assets/033d4219-910c-4cf4-9890-c2851727f185)
+
+declare and call Class/Object 
+![image](https://github.com/user-attachments/assets/1a826f28-ae16-413a-b385-b45dfa909b35)
+
+
 
 
 

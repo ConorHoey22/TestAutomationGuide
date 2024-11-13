@@ -257,9 +257,18 @@ Binding using e.g. [BeforeTestRun] and [Binding] the class
 declare and call Class/Object 
 ![image](https://github.com/user-attachments/assets/1a826f28-ae16-413a-b385-b45dfa909b35)
 
+Create a new class 
+GlobalProperties.cs
 
+Install Nuget Package 
+Microsoft.Extensions.Configuration.Json
 
+Create a configurationbuilder which will be used to read the json file -> before running the script make sure to edit the File Properties to Copy as always.
 
+![image](https://github.com/user-attachments/assets/9f9ffc6f-29a0-48e1-8e4f-65a7a7148457)
+
+Add GlobalProperties to the UnitTest within DemoUI.Test before doing this make sure to add Project reference to this project(DemoUI.Test)
+![image](https://github.com/user-attachments/assets/f6acac18-6700-4e78-a713-a41299341786)
 
 
 

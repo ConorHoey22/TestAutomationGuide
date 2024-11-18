@@ -270,6 +270,22 @@ Create a configurationbuilder which will be used to read the json file -> before
 Add GlobalProperties to the UnitTest within DemoUI.Test before doing this make sure to add Project reference to this project(DemoUI.Test)
 ![image](https://github.com/user-attachments/assets/f6acac18-6700-4e78-a713-a41299341786)
 
+inhertance of GlobalProperties 
+
+lets create an interface for our GlobalProperties class now 
+
+Create a class called IGlobalProperties in our Abstract class and declare the functions we want to inherit
+![image](https://github.com/user-attachments/assets/0bbbd7b7-8b87-4952-81cc-887eb0590069)
+
+
+
+Inherit the GlobalProperties class
+![image](https://github.com/user-attachments/assets/65ba3367-c485-466e-9159-71cf79e2d482)
+
+
+Add GlobalProperties to our service container
+We can then pass our logging object to our UnitTest , by declaring iserviceProvider 
+![image](https://github.com/user-attachments/assets/0a8f557c-c80b-4386-a434-5780c41ff77e)
 
 
 

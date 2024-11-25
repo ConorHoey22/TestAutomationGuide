@@ -275,7 +275,8 @@ inhertance of GlobalProperties
 lets create an interface for our GlobalProperties class now 
 
 Create a class called IGlobalProperties in our Abstract class and declare the functions we want to inherit
-![image](https://github.com/user-attachments/assets/0bbbd7b7-8b87-4952-81cc-887eb0590069)
+add a try catch for when to catch the frameworksettings json file incase its not present and inherit the logging system
+![image](https://github.com/user-attachments/assets/3f028dfb-eff7-42ef-b000-33159f8ce4e5)
 
 
 

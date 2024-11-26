@@ -1,6 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
+using System.Net.NetworkInformation;
 using TestAutomationFramework.Core.WebUI.Abstraction;
-using TestAutomationFramework.Core.WebUI.ContainerConfig;
+using TestAutomationFramework.Core.WebUI.DIContainerConfig;
+using TestAutomationFramework.Core.WebUI.Params;
 using TestAutomationFramework.Core.WebUI.Reports;
 
 namespace TestAutomationFramework.DemoUI.Test
@@ -12,17 +14,23 @@ namespace TestAutomationFramework.DemoUI.Test
         {
             // Logging logging = new Logging();
 
-            IServiceProvider iserviceProvider = ContainerConfig.ContainerServices();
-            ILogging logging = iserviceProvider.GetRequiredService<ILogging>();
+            //GlobalProperties globalProperties = new GlobalProperties();
+            //globalProperties.Configuration();
 
-            logging.Warning("There is a Warning here");
-            logging.Information("There is a informaion log here");
+            IServiceProvider iserviceProvider = ContainerConfig.ContainerServices();
+            
+            IGlobalProperties globalProperties = iserviceProvider.GetRequiredService<IGlobalProperties>();
+            //globalProperties.Configuration();
+            
+            //ILogging logging = iserviceProvider.GetRequiredService<ILogging>();
+            //logging.Warning("There is a Warning here");
+            //logging.Information("There is a informaion log here");
         }
 
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            //Assert.Pass();
         }
     }
 }

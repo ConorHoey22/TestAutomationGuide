@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestAutomationFramework.Core.WebUI.Abstraction
 {
-    public interface IDefaultVariables
+    public interface IGlobalProperties
     {
-        string getLog { get; }
-
-        string getFrameworkSettings { get; }
-        string gridhuburl { get; }
-        string dataSetLocation { get; }
-
+        void Configuration();
     }
 }

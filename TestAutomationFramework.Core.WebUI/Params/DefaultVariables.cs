@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,5 +27,43 @@ namespace TestAutomationFramework.Core.WebUI.Params
                 return getReport + "\\log.txt";
             }
         }
+
+
+        public string getFrameworkSettings
+        {
+
+            get
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "FrameworkSettings.json");
+            }
+
+        }
+
+
+
+        public string gridhuburl
+        {
+
+            get
+            {
+                return "https://localhost:4444/wd/hub";
+            }
+
+        }
+
+
+
+        public string dataSetLocation
+        {
+
+            get
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "\\DataSetLocation");
+            }
+
+        }
+
+
     }
+
 }

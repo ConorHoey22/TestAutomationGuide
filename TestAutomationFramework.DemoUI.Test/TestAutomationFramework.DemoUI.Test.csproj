@@ -31,4 +31,13 @@
     <Folder Include="Results\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Resources\applicationConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\FrameworkSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

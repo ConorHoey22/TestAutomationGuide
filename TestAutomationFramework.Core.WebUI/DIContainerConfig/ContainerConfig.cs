@@ -8,7 +8,7 @@ using TestAutomationFramework.Core.WebUI.Abstraction;
 using TestAutomationFramework.Core.WebUI.Params;
 using TestAutomationFramework.Core.WebUI.Reports;
 
-namespace TestAutomationFramework.Core.WebUI.ContainerConfig
+namespace TestAutomationFramework.Core.WebUI.DIContainerConfig
 {
     public class ContainerConfig
     {
@@ -23,6 +23,7 @@ namespace TestAutomationFramework.Core.WebUI.ContainerConfig
             //creating a service to request the object  <interface , Class  >
             services.AddSingleton<IDefaultVariables, DefaultVariables>();
             services.AddSingleton<ILogging, Logging>();
+            services.AddSingleton<IGlobalProperties, GlobalProperties>();
 
             // Build container
             return services.BuildServiceProvider();

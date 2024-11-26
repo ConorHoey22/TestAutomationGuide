@@ -290,6 +290,16 @@ We can then pass our logging object to our UnitTest , by declaring iserviceProvi
 
 
 
+Setting Default Values as properties using the Frameworksetting.json
+
+Below us the complete global properties file , whee we use Set and get variables to assign the default properties and using the configbuilder to set values and validation 
+
+we are use inherit _idefaultVariables to call certain methods for the configbuulder and using ilogging we display the Config settings in a report when we run/debug the tests 
+![image](https://github.com/user-attachments/assets/f46532a6-e7b8-41a2-a1fd-a632f2689e84)
+
+![image](https://github.com/user-attachments/assets/0253e72c-2249-4ecf-b655-084c6bee043f)
+
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 

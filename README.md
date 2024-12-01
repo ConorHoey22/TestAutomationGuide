@@ -302,5 +302,19 @@ we are use inherit _idefaultVariables to call certain methods for the configbuul
 
 -------------------------------------------------------------------------------------------------------------------------------
 
+Defining Scenerios 
+
+Create an item within the Test_Cases folder and create a SpecFlow feature file 
+
+Start by creating the Login scenerio. 
+
+1. Give the Scenerio a name :
+2. Give a Condition to begin
+3. define steps by right clikiung  ( TIP : If you are unable to define , try close  VS studio and the text should be a light grey or purple.
+![image](https://github.com/user-attachments/assets/d8f3646a-0885-4258-b985-67fe207c8df0)
+
+![image](https://github.com/user-attachments/assets/f3f6a9d7-e177-4552-97b5-5a847f5f7e21)
+
+
 
 

@@ -310,7 +310,7 @@ Start by creating the Login scenerio.
 
 1. Give the Scenerio a name :
 2. Give a Condition to begin
-3. define steps by right clikiung  ( TIP : If you are unable to define , try close  VS studio and the text should be a light grey or purple.
+3. define steps by right clicking -> define steps -> Copy to clipboard or define steps button  ( TIP : If you are unable to define , try close  VS studio and the text should be a light grey or purple.
 ![image](https://github.com/user-attachments/assets/d8f3646a-0885-4258-b985-67fe207c8df0)
 
 ![image](https://github.com/user-attachments/assets/f3f6a9d7-e177-4552-97b5-5a847f5f7e21)

@@ -310,10 +310,22 @@ Start by creating the Login scenerio.
 
 1. Give the Scenerio a name :
 2. Give a Condition to begin
-3. define steps by right clicking -> define steps -> Copy to clipboard or define steps button  ( TIP : If you are unable to define , try close  VS studio and the text should be a light grey or purple.
+3. define steps by right clicking -> define steps -> Copy to clipboard ( TIP : If you are unable to define , try close  VS studio and the text should be a light grey or purple.
 ![image](https://github.com/user-attachments/assets/d8f3646a-0885-4258-b985-67fe207c8df0)
 
 ![image](https://github.com/user-attachments/assets/f3f6a9d7-e177-4552-97b5-5a847f5f7e21)
+
+Next create 2 new folders within Demo.UI called Steps and the other called Pages 
+![image](https://github.com/user-attachments/assets/b1b9f73f-5941-4008-8c99-5741a6f32240)
+
+Within Steps create a Class called Login and declare the construtor and copy the Login Steps 
+![image](https://github.com/user-attachments/assets/cc81bbd0-22de-4eaa-902e-decf689cdd78)
+
+Within Page create a Class called LoginPages and declare the constructor, create method called LoginWithValidCredentials and have the username and password as the parameters.
+
+![image](https://github.com/user-attachments/assets/2042a096-29cb-4dc3-b6d5-226ac8dadac3)
+
+Before the next step , install the Nuget Package Selenium webdriver to DemoUI Project
 
 
 

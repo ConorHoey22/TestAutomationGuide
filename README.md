@@ -330,7 +330,7 @@ Before the next step , install the Nuget Package Selenium webdriver and webdrive
 
 declare WebdriverManager and setup the driver with new chromeconfig
 
-And declare the WebDriver with chromeDriver and put it at Class level to allow us to use it through the file
+And declare the Selenium WebDriver Object with chromeDriver and put it at Class level to allow us to use it through the file
 
 
 
@@ -342,6 +342,12 @@ Useful chrome extension to get Xpath selectors
 
 Within our LoginWithValidCredentials we will be using IWebElement and our  Webdriver to navigate to the Login page and Find the element using selenium Webdriver  and sendkeys(username) and password and tell the webDriver to click the login btn.
 ![image](https://github.com/user-attachments/assets/17bc47cc-0a07-45fa-9c64-0e31c9ccfe98)
+
+
+Within our LoginSteps file , we will declare LoginPage as an object so that we can access its methods 
+Within GivenLoginWithValidLogin() , we will call our object and the LoginWithValidationCredentials and pass 2 values which are the username + password. 
+![image](https://github.com/user-attachments/assets/de64669e-a36d-4ae6-99c9-62c36f7c0755)
+
 
 
 

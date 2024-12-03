@@ -334,3 +334,14 @@ And declare the WebDriver with chromeDriver and put it at Class level to allow u
 
 
 
+Useful chrome extension to get Xpath selectors 
+![image](https://github.com/user-attachments/assets/98f1d4fe-b6ba-400d-9c0a-de4c41bc8f6c)
+
+
+
+
+Within our LoginWithValidCredentials we will be using IWebElement and our  Webdriver to navigate to the Login page and Find the element using selenium Webdriver  and sendkeys(username) and password and tell the webDriver to click the login btn.
+![image](https://github.com/user-attachments/assets/17bc47cc-0a07-45fa-9c64-0e31c9ccfe98)
+
+
+

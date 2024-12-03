@@ -325,8 +325,12 @@ Within Page create a Class called LoginPages and declare the constructor, create
 
 ![image](https://github.com/user-attachments/assets/2042a096-29cb-4dc3-b6d5-226ac8dadac3)
 
-Before the next step , install the Nuget Package Selenium webdriver to DemoUI Project
+Before the next step , install the Nuget Package Selenium webdriver and webdriver manager to DemoUI Project
 
+
+declare WebdriverManager and setup the driver with new chromeconfig
+
+And declare the WebDriver with chromeDriver and put it at Class level to allow us to use it through the file
 
 
 

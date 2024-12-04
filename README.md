@@ -345,8 +345,24 @@ Within our LoginWithValidCredentials we will be using IWebElement and our  Webdr
 
 
 Within our LoginSteps file , we will declare LoginPage as an object so that we can access its methods 
-Within GivenLoginWithValidLogin() , we will call our object and the LoginWithValidationCredentials and pass 2 values which are the username + password. 
-![image](https://github.com/user-attachments/assets/de64669e-a36d-4ae6-99c9-62c36f7c0755)
+Within GivenLoginWithValidLogin() , we will call our object and the LoginWithValidationCredentials and pass 2 values which are the username + password.  
+-- TIP : ensure to bind class using Binding in order to reference
+![image](https://github.com/user-attachments/assets/f62bb322-95b3-4322-b8e1-67fec5dd1e4e)
+
+
+
+Due to our feature files being within DemoUI.Test Project , we need to reference the project to be able to define our Steps within LoginStep file
+![image](https://github.com/user-attachments/assets/69d1952d-caf2-4106-a97b-69c634b37fa2)
+
+Go to DemoUi.test project and Right Click -> Add -> Project Reference
+![image](https://github.com/user-attachments/assets/2806e93a-981f-4b17-a7a9-1ee0ccf07ebb)
+
+Go to DemoUi.test project and Right Click -> Add ->  New item -> Specflow configuration file
+Add a step assembly and then assign the project you want to reference and then also set the files properties-> copy to output directory to Copy always 
+![image](https://github.com/user-attachments/assets/bb933d98-a24d-4848-800c-06b2940744b2)
+
+
+
 
 
 

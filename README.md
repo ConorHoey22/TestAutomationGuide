@@ -304,6 +304,8 @@ we are use inherit _idefaultVariables to call certain methods for the configbuul
 
 Defining Scenerios 
 
+TIP - After creating this file , ensure to rebuild the project but before this Ensure SpecFlow.Tools.MsBuild.Generation Nuget package is downloaded as this will auto generate the Feature.cs file 
+
 Create an item within the Test_Cases folder and create a SpecFlow feature file 
 
 Start by creating the Login scenerio. 
@@ -361,8 +363,28 @@ Go to DemoUi.test project and Right Click -> Add ->  New item -> Specflow config
 Add a step assembly and then assign the project you want to reference and then also set the files properties-> copy to output directory to Copy always 
 ![image](https://github.com/user-attachments/assets/bb933d98-a24d-4848-800c-06b2940744b2)
 
+After you have rebuilt the solution -> Navigate to you feature file and you can now see that the Steo is defined
+![image](https://github.com/user-attachments/assets/dc5ad2d1-83bd-453a-b010-1731b60afa2a)
 
+you can also right the Step and click Go to Definition to find it and in this case it brought us to LoginSteps file which is located within DemoUi Project which means our project reference as worked 
+![image](https://github.com/user-attachments/assets/bf854e0c-f10f-4a00-8a31-ce1c9ac53401)
 
+Now open your Test Explorer and run the LoginFeature. The Test was successful and opened the browser and signed in using the login page . 
+![image](https://github.com/user-attachments/assets/99e833e1-92be-48e4-bcf8-634992414c44)
+
+lets create another scenario for Invalid login 
+![image](https://github.com/user-attachments/assets/daa1b2c0-65e7-4922-bfae-0a20f85b6149)
+
+Define the step defination and copy to clipboard and paste it within the LoginSteps class 
+![image](https://github.com/user-attachments/assets/8f98254d-5f3b-43f7-afc0-b507485f5671)
+
+We then need to create a new method within LoginPage.cs and add the selenium webdriver instructions . Also to reduce code , we will put the elements on the Class level and user => operator
+![image](https://github.com/user-attachments/assets/d4555c9a-6f0c-4ec0-9a46-204cbcf14e43)
+
+Go back to LoginSteps.cs and using our LoginPage Object, We will call upon our method 
+![image](https://github.com/user-attachments/assets/3f9d13c7-287a-40cd-b19a-b3aac93848c9)
+
+ 
 
 
 

@@ -1,15 +1,15 @@
 {
-  "BrowserType": "chrome", // The browser type, e.g., chrome, firefox, edge
+  "BrowserType": "", // The browser type, e.g., chrome, firefox, edge
   "BrowserVersion": "", // Keep blank for the latest version or specify a version like "95.0"
 
-  "GridHubUrl": "https://localhost:4444/wd/hub", // Selenium Grid hub URL. Use localhost if running locally
+  "GridHubUrl": "", // Selenium Grid hub URL. Use localhost if running locally
 
   "StepScreenShot": "off", // Set to "on" for capturing screenshots of every step; "off" for failures only
 
   "ExtentReportPortalUrl": "", // Optional URL for an Extent Report portal, leave blank if not used
   "ExtentReportToPortal": "off", // Set to "on" to push reports to a portal, "off" to store locally
 
-  "LogLevel": "Debug", // Logging level: Debug, Info, Warning, Error ,fatal 
+  "LogLevel": "", // Logging level: Debug, Info, Warning, Error ,fatal 
   "DataSetLocation": "", // Path to test data files, if any
 
   "DownloadedLocation": "" // Path where downloaded files should be saved during tests

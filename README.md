@@ -302,5 +302,90 @@ we are use inherit _idefaultVariables to call certain methods for the configbuul
 
 -------------------------------------------------------------------------------------------------------------------------------
 
+Defining Scenerios 
+
+TIP - After creating this file , ensure to rebuild the project but before this Ensure SpecFlow.Tools.MsBuild.Generation Nuget package is downloaded as this will auto generate the Feature.cs file 
+
+Create an item within the Test_Cases folder and create a SpecFlow feature file 
+
+Start by creating the Login scenerio. 
+
+1. Give the Scenerio a name :
+2. Give a Condition to begin
+3. define steps by right clicking -> define steps -> Copy to clipboard ( TIP : If you are unable to define , try close  VS studio and the text should be a light grey or purple.
+![image](https://github.com/user-attachments/assets/d8f3646a-0885-4258-b985-67fe207c8df0)
+
+![image](https://github.com/user-attachments/assets/f3f6a9d7-e177-4552-97b5-5a847f5f7e21)
+
+Next create 2 new folders within Demo.UI called Steps and the other called Pages 
+![image](https://github.com/user-attachments/assets/b1b9f73f-5941-4008-8c99-5741a6f32240)
+
+Within Steps create a Class called Login and declare the construtor and copy the Login Steps 
+![image](https://github.com/user-attachments/assets/cc81bbd0-22de-4eaa-902e-decf689cdd78)
+
+Within Page create a Class called LoginPages and declare the constructor, create method called LoginWithValidCredentials and have the username and password as the parameters.
+
+![image](https://github.com/user-attachments/assets/2042a096-29cb-4dc3-b6d5-226ac8dadac3)
+
+Before the next step , install the Nuget Package Selenium webdriver and webdriver manager to DemoUI Project
+
+
+declare WebdriverManager and setup the driver with new chromeconfig
+
+And declare the Selenium WebDriver Object with chromeDriver and put it at Class level to allow us to use it through the file
+
+
+
+Useful chrome extension to get Xpath selectors 
+![image](https://github.com/user-attachments/assets/98f1d4fe-b6ba-400d-9c0a-de4c41bc8f6c)
+
+
+
+
+Within our LoginWithValidCredentials we will be using IWebElement and our  Webdriver to navigate to the Login page and Find the element using selenium Webdriver  and sendkeys(username) and password and tell the webDriver to click the login btn.
+![image](https://github.com/user-attachments/assets/17bc47cc-0a07-45fa-9c64-0e31c9ccfe98)
+
+
+Within our LoginSteps file , we will declare LoginPage as an object so that we can access its methods 
+Within GivenLoginWithValidLogin() , we will call our object and the LoginWithValidationCredentials and pass 2 values which are the username + password.  
+-- TIP : ensure to bind class using Binding in order to reference
+![image](https://github.com/user-attachments/assets/f62bb322-95b3-4322-b8e1-67fec5dd1e4e)
+
+
+
+Due to our feature files being within DemoUI.Test Project , we need to reference the project to be able to define our Steps within LoginStep file
+![image](https://github.com/user-attachments/assets/69d1952d-caf2-4106-a97b-69c634b37fa2)
+
+Go to DemoUi.test project and Right Click -> Add -> Project Reference
+![image](https://github.com/user-attachments/assets/2806e93a-981f-4b17-a7a9-1ee0ccf07ebb)
+
+Go to DemoUi.test project and Right Click -> Add ->  New item -> Specflow configuration file
+Add a step assembly and then assign the project you want to reference and then also set the files properties-> copy to output directory to Copy always 
+![image](https://github.com/user-attachments/assets/bb933d98-a24d-4848-800c-06b2940744b2)
+
+After you have rebuilt the solution -> Navigate to you feature file and you can now see that the Steo is defined
+![image](https://github.com/user-attachments/assets/dc5ad2d1-83bd-453a-b010-1731b60afa2a)
+
+you can also right the Step and click Go to Definition to find it and in this case it brought us to LoginSteps file which is located within DemoUi Project which means our project reference as worked 
+![image](https://github.com/user-attachments/assets/bf854e0c-f10f-4a00-8a31-ce1c9ac53401)
+
+Now open your Test Explorer and run the LoginFeature. The Test was successful and opened the browser and signed in using the login page . 
+![image](https://github.com/user-attachments/assets/99e833e1-92be-48e4-bcf8-634992414c44)
+
+lets create another scenario for Invalid login 
+![image](https://github.com/user-attachments/assets/daa1b2c0-65e7-4922-bfae-0a20f85b6149)
+
+Define the step defination and copy to clipboard and paste it within the LoginSteps class 
+![image](https://github.com/user-attachments/assets/8f98254d-5f3b-43f7-afc0-b507485f5671)
+
+We then need to create a new method within LoginPage.cs and add the selenium webdriver instructions . Also to reduce code , we will put the elements on the Class level and user => operator
+![image](https://github.com/user-attachments/assets/d4555c9a-6f0c-4ec0-9a46-204cbcf14e43)
+
+Go back to LoginSteps.cs and using our LoginPage Object, We will call upon our method 
+![image](https://github.com/user-attachments/assets/3f9d13c7-287a-40cd-b19a-b3aac93848c9)
+
+ 
+
+
 
 

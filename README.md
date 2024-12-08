@@ -387,7 +387,7 @@ Go back to LoginSteps.cs and using our LoginPage Object, We will call upon our m
  
 ---------------------
 
-Within you DefaultVariables Class , createa method for getting you Application Config json file .
+Within you DefaultVariables Class , create a method for getting you Application Config json file .
 
 ![image](https://github.com/user-attachments/assets/23d83e13-d9a8-4ef3-a7a4-9ea456e53fdd)
 
@@ -396,6 +396,15 @@ Then add it to our interface
 
 ensure that you file properties, Copy to Output Directory - "Copy always"
 ![image](https://github.com/user-attachments/assets/b433c9d2-509c-4a76-9171-ffe1398cc409)
+
+Create a Class called AtConfiguration within DemoUi (you will need to create a new folder aswell )
+![image](https://github.com/user-attachments/assets/d5c001e4-b21e-4546-915b-24e04cd29400)
+
+Within this Class , call the specflowRunner as seen below and ensure that the specflow object is updated to public and ensure to Project reference the project that has SpecflowRunner present in . 
+![image](https://github.com/user-attachments/assets/3983af75-ef47-4934-8a71-b765c570908a)
+
+![image](https://github.com/user-attachments/assets/aa660c57-69db-46a1-9380-454796aee195)
+
 
 
 

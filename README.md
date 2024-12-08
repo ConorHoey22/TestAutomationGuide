@@ -385,6 +385,19 @@ Go back to LoginSteps.cs and using our LoginPage Object, We will call upon our m
 ![image](https://github.com/user-attachments/assets/3f9d13c7-287a-40cd-b19a-b3aac93848c9)
 
  
+---------------------
+
+Within you DefaultVariables Class , createa method for getting you Application Config json file .
+
+![image](https://github.com/user-attachments/assets/23d83e13-d9a8-4ef3-a7a4-9ea456e53fdd)
+
+Then add it to our interface 
+![image](https://github.com/user-attachments/assets/b439bd55-fc3c-46b1-9519-efded6f91ffd)
+
+ensure that you file properties, Copy to Output Directory - "Copy always"
+![image](https://github.com/user-attachments/assets/b433c9d2-509c-4a76-9171-ffe1398cc409)
+
+
 
 
 

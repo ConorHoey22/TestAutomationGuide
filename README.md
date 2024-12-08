@@ -406,6 +406,16 @@ Within this Class , call the specflowRunner as seen below and ensure that the sp
 ![image](https://github.com/user-attachments/assets/aa660c57-69db-46a1-9380-454796aee195)
 
 
+lets create an interface for our Logging class now 
+
+Create a class called IAtConfiguration in our IWebAbstraction folder (you may need to create this)
+![image](https://github.com/user-attachments/assets/c92c658c-c7d0-482e-a652-58a012455be4)
+
+In our AtConfiguration we will create the interface and create our getConfiguration 
+![image](https://github.com/user-attachments/assets/adacc47a-c08a-4e8f-9d9f-52db2ee13407)
+
+Which is then called in our Interface 
+![image](https://github.com/user-attachments/assets/6051ad6c-b57b-47cf-b505-b993ff109e1b)
 
 
 

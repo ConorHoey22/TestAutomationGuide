@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TestAutomationFramework.Core.WebUI.Abstraction;
 using TestAutomationFramework.Core.WebUI.Params;
 using TestAutomationFramework.Core.WebUI.Reports;
+using TestAutomationFramework.Core.WebUI.Runner;
 
 namespace TestAutomationFramework.Core.WebUI.DIContainerConfig
 {
@@ -24,6 +25,8 @@ namespace TestAutomationFramework.Core.WebUI.DIContainerConfig
             services.AddSingleton<IDefaultVariables, DefaultVariables>();
             services.AddSingleton<ILogging, Logging>();
             services.AddSingleton<IGlobalProperties, GlobalProperties>();
+
+
 
             // Build container
             return services.BuildServiceProvider();

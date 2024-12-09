@@ -3,6 +3,9 @@
   "stepAssemblies": [
     {
       "assembly": "TestAutomationFramework.DemoUi"
+    },
+    {
+      "assembly": "TestAutomationFramework.Core.WebUI"
     }
   ]
 

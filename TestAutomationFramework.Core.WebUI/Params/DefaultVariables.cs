@@ -39,6 +39,16 @@ namespace TestAutomationFramework.Core.WebUI.Params
 
         }
 
+        public string getApplicationSettings
+        {
+
+            get
+            {
+                return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "applicationConfig.json");
+            }
+
+        }
+
 
 
         public string gridhuburl

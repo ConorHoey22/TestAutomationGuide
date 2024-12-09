@@ -12,8 +12,8 @@ namespace TestAutomationFramework.Core.WebUI.Runner
     [Binding]
     public class SpecflowRunner
     {
-        //declaure method
-        static IServiceProvider iserviceProvider;
+        //declare method
+        public static IServiceProvider _iserviceProvider;
 
 
         [BeforeTestRun]
@@ -21,7 +21,7 @@ namespace TestAutomationFramework.Core.WebUI.Runner
         {
 
             //Call the Container Config 
-            iserviceProvider =  ContainerConfig.ContainerServices();
+            _iserviceProvider = ContainerConfig.ContainerServices();
         }
     }
 }

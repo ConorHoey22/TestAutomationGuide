@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using TestAutomationFramework.DemoUi.Pages;
+using TestAutomationFramework.DemoUi.WebAbstraction;
 
 namespace TestAutomationFramework.DemoUi.Steps
 {
@@ -13,17 +14,20 @@ namespace TestAutomationFramework.DemoUi.Steps
     public class LoginSteps
     {
         LoginPage _loginPage;
+        IAtConfiguration _iatConfiguration;
 
-        public LoginSteps() { 
+        public LoginSteps(IAtConfiguration iatConfiguration) 
+        { 
         
-            _loginPage = new LoginPage();  
+            _iatConfiguration = iatConfiguration; 
+            _loginPage = new LoginPage(_iatConfiguration);  
         
         }
 
         [Given(@"login with valid login")]
         public void GivenLoginWithValidLogin()
         {
-            _loginPage.LoginWithValidCredentials("standard_user","secret_sauce");
+            _loginPage.LoginWithValidCredentials(_iatConfiguration.GetConfiguration("username"), _iatConfiguration.GetConfiguration("password"));
         }
 
 

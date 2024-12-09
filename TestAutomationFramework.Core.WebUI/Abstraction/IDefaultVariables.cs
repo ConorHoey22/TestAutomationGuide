@@ -11,6 +11,7 @@ namespace TestAutomationFramework.Core.WebUI.Abstraction
         string getLog { get; }
 
         string getFrameworkSettings { get; }
+        string getApplicationSettings { get; }
         string gridhuburl { get; }
         string dataSetLocation { get; }
 

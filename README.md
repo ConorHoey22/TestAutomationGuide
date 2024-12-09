@@ -392,32 +392,66 @@ Within you DefaultVariables Class , create a method for getting you Application 
 ![image](https://github.com/user-attachments/assets/23d83e13-d9a8-4ef3-a7a4-9ea456e53fdd)
 
 Then add it to our interface 
+
 ![image](https://github.com/user-attachments/assets/b439bd55-fc3c-46b1-9519-efded6f91ffd)
 
 ensure that you file properties, Copy to Output Directory - "Copy always"
+
 ![image](https://github.com/user-attachments/assets/b433c9d2-509c-4a76-9171-ffe1398cc409)
 
 Create a Class called AtConfiguration within DemoUi (you will need to create a new folder aswell )
+
 ![image](https://github.com/user-attachments/assets/d5c001e4-b21e-4546-915b-24e04cd29400)
 
 Within this Class , call the specflowRunner as seen below and ensure that the specflow object is updated to public and ensure to Project reference the project that has SpecflowRunner present in . 
+
 ![image](https://github.com/user-attachments/assets/3983af75-ef47-4934-8a71-b765c570908a)
 
 ![image](https://github.com/user-attachments/assets/aa660c57-69db-46a1-9380-454796aee195)
 
+---------------------------------------------
 
-lets create an interface for our Logging class now 
+lets create an interface for our AtConfiguration class now 
 
 Create a class called IAtConfiguration in our IWebAbstraction folder (you may need to create this)
+
 ![image](https://github.com/user-attachments/assets/c92c658c-c7d0-482e-a652-58a012455be4)
 
 In our AtConfiguration we will create the interface and create our getConfiguration 
+
 ![image](https://github.com/user-attachments/assets/adacc47a-c08a-4e8f-9d9f-52db2ee13407)
 
 Which is then called in our Interface 
+
 ![image](https://github.com/user-attachments/assets/6051ad6c-b57b-47cf-b505-b993ff109e1b)
 
+Create a folder called Container and within create a class called ContainerConfig
 
+**BeforeScenario Hook**
+The BeforeScenario method registers dependencies with IObjectContainer. For example, it ensures that whenever an IAtConfiguration is required, an instance of AtConfiguration is provided.
+
+Order = 1: Specifies the execution order of hooks. Hooks with lower order values execute first. This ensures that this setup occurs before other BeforeScenario hooks with higher order values.
+
+Purpose: IObjectContainer allows you to register and resolve types specific to SpecFlow's lifecycle (e.g., per scenario, per step).
+The BeforeScenario method registers dependencies with IObjectContainer. For example, it ensures that whenever an IAtConfiguration is required, an instance of AtConfiguration is provided.
+
+SpecFlow automatically injects IAtConfiguration wherever it’s needed (e.g., in step definitions or other dependencies).
+
+![image](https://github.com/user-attachments/assets/1412cda0-e50b-423e-b10a-63ef566a2a8d)
+
+inherit IAtConfiguration interface
+
+Add it to the LoginSteps parameters which will then allow you to use the object and the method .GetConfiguration() and call/read the application settings URL , Username and Password.
+
+![image](https://github.com/user-attachments/assets/6e68de94-b8c3-49c3-8c9c-054fcda93497)
+
+Update Login Page Class 
+
+![image](https://github.com/user-attachments/assets/92684c66-c3bc-43f3-88dc-ae7630d8360f)
+
+Add to assembly 
+
+![image](https://github.com/user-attachments/assets/88e8a95c-c988-4757-9eb2-8e411f3d6758)
 
 
 

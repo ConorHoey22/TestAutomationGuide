@@ -316,6 +316,13 @@ Within this method, create the selenium webdriver ChromeDriver
 Create method GetOption called ChromeOptions and declare the Browser options 
 ![image](https://github.com/user-attachments/assets/3aa39007-edc7-4944-9733-aa0f1aa7b474)
 
+Next create an Interface class within our Abstraction foleder called IChromeWebDriver
+![image](https://github.com/user-attachments/assets/312adb53-dafb-4396-9e34-7b0d02262b42)
+
+then update the ChromwWebDriver class 
+![image](https://github.com/user-attachments/assets/54145f7f-18a8-4f4d-9247-a838e24db106)
+
+
 
 
 

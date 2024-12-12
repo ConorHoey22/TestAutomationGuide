@@ -300,6 +300,27 @@ we are use inherit _idefaultVariables to call certain methods for the configbuul
 ![image](https://github.com/user-attachments/assets/0253e72c-2249-4ecf-b655-084c6bee043f)
 
 
+--------
+
+
+Create an Object for Webdrivers - Chrome etc
+
+Create a folder called Selenium within our WebUI Project 
+Create a folder called LocalWebDrivers 
+within this folder create a Class called ChromeWebdrivers 
+
+Create a constructor 
+Create a method and call out Webdriver and ChromeConfig  ** TIP: ensure to install Webdriver manager + selenium webdriver on this Project
+Within this method, create the selenium webdriver ChromeDriver
+
+Create method GetOption called ChromeOptions and declare the Browser options 
+![image](https://github.com/user-attachments/assets/3aa39007-edc7-4944-9733-aa0f1aa7b474)
+
+
+
+
+
+
 -------------------------------------------------------------------------------------------------------------------------------
 
 

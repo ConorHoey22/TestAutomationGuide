@@ -1,4 +1,4 @@
-Selenium , SpecFlow , C#
+![image](https://github.com/user-attachments/assets/bf20e024-9c71-46d4-8496-7443bd809751)Selenium , SpecFlow , C#
 
 ------ Setup ------
 
@@ -454,23 +454,31 @@ Add to assembly
 ![image](https://github.com/user-attachments/assets/88e8a95c-c988-4757-9eb2-8e411f3d6758)
 
 ------------ Creating ChromeDriver + FirefoxDriver as an Object ---- - 
-Create Foler
+Create Folder  called selenium 
 
+Create a folder within called localWebdrivers 
 
 Chrome 
+Create a new class called ChromeWebdriver 
+![image](https://github.com/user-attachments/assets/367033d8-f37a-4fb8-bfe5-3e32f2f81fe3)
 
-![image](https://github.com/user-attachments/assets/b65a00b1-b458-4508-99ba-7ed65450f621)
+set and get methods on global properties class which allows us to inherit datasetLocation
+![image](https://github.com/user-attachments/assets/43cc8a21-b564-47de-93df-af16278fff90)
 
-Create interface class within  ... called IChromeWebDriver 
+Create interface class within  Abstraction folder called IChromeWebDriver 
+![image](https://github.com/user-attachments/assets/05b1fdbd-5127-4ddd-b680-e7c537c9ad01)
 
-then repeat for other browsers we will do the same for firefox 
+Then repeat for other browsers
+
+Firefox
+Create a new class called FirefoxWebdriver 
 
 
+Create interface class within Abstraction folder called IFirefox WebDriver 
+![image](https://github.com/user-attachments/assets/dfd4dc68-1527-441e-b3f3-ef4154dd49fe)
 
 
-
-firefox
-![image](https://github.com/user-attachments/assets/c1f5854c-e6a9-49b7-a16c-eb91d49cbcfc)
+-----------
 
 
 

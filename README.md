@@ -472,6 +472,7 @@ Then repeat for other browsers
 
 Firefox
 Create a new class called FirefoxWebdriver 
+![image](https://github.com/user-attachments/assets/b99c8f3f-782e-4f42-a7d5-8de399d05b81)
 
 
 Create interface class within Abstraction folder called IFirefox WebDriver 

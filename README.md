@@ -453,5 +453,25 @@ Add to assembly
 
 ![image](https://github.com/user-attachments/assets/88e8a95c-c988-4757-9eb2-8e411f3d6758)
 
+------------ Creating ChromeDriver + FirefoxDriver as an Object ---- - 
+Create Foler
+
+
+Chrome 
+
+![image](https://github.com/user-attachments/assets/b65a00b1-b458-4508-99ba-7ed65450f621)
+
+Create interface class within  ... called IChromeWebDriver 
+
+then repeat for other browsers we will do the same for firefox 
+
+
+
+
+
+firefox
+![image](https://github.com/user-attachments/assets/c1f5854c-e6a9-49b7-a16c-eb91d49cbcfc)
+
+
 
 

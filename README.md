@@ -479,7 +479,14 @@ Create interface class within Abstraction folder called IFirefox WebDriver
 ![image](https://github.com/user-attachments/assets/dfd4dc68-1527-441e-b3f3-ef4154dd49fe)
 
 
------------
+Within WebUI -> rename the containerconfig to CoreContainerConfig 
+![image](https://github.com/user-attachments/assets/8107fbc7-f308-43b9-83ad-e1630dbeedc8)
+
+within this file we will create an new method called SetContainer which will reference our chrome and firefox interfaces 
+![image](https://github.com/user-attachments/assets/dd2fc54a-8a35-46c3-a6c6-0717dac00e04)
+
+next within ContainerConfig within DemoUI containerConfig , we will reference the CoreContainerConfig which will reference our 2 browsers 
+![image](https://github.com/user-attachments/assets/d8c2bf0a-427c-4182-b3a8-583b8d1590d8)
 
 
 

@@ -467,6 +467,8 @@ set and get methods on global properties class which allows us to inherit datase
 
 Create interface class within  Abstraction folder called IChromeWebDriver 
 ![image](https://github.com/user-attachments/assets/05b1fdbd-5127-4ddd-b680-e7c537c9ad01)
+![image](https://github.com/user-attachments/assets/2cfa1219-9b3c-4f0b-8631-ca8f679141d0)
+
 
 Then repeat for other browsers
 
@@ -489,5 +491,8 @@ next within ContainerConfig within DemoUI containerConfig , we will reference th
 ![image](https://github.com/user-attachments/assets/d8c2bf0a-427c-4182-b3a8-583b8d1590d8)
 
 
+Create a new folder called Hooks 
+Within this folder create a class called SpecFlowBase within WebUI Project
+![image](https://github.com/user-attachments/assets/01f160d1-7a44-4093-a1f5-63f2a71e3a5d)
 
 

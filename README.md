@@ -1,4 +1,4 @@
-Selenium , SpecFlow , C#
+![image](https://github.com/user-attachments/assets/bf20e024-9c71-46d4-8496-7443bd809751)Selenium , SpecFlow , C#
 
 ------ Setup ------
 
@@ -452,6 +452,58 @@ Update Login Page Class
 Add to assembly 
 
 ![image](https://github.com/user-attachments/assets/88e8a95c-c988-4757-9eb2-8e411f3d6758)
+
+------------ Creating ChromeDriver + FirefoxDriver as an Object ---- - 
+Create Folder  called selenium 
+
+Create a folder within called localWebdrivers 
+
+Chrome 
+Create a new class called ChromeWebdriver 
+![image](https://github.com/user-attachments/assets/367033d8-f37a-4fb8-bfe5-3e32f2f81fe3)
+
+set and get methods on global properties class which allows us to inherit datasetLocation
+![image](https://github.com/user-attachments/assets/43cc8a21-b564-47de-93df-af16278fff90)
+
+Create interface class within  Abstraction folder called IChromeWebDriver 
+![image](https://github.com/user-attachments/assets/05b1fdbd-5127-4ddd-b680-e7c537c9ad01)
+![image](https://github.com/user-attachments/assets/2cfa1219-9b3c-4f0b-8631-ca8f679141d0)
+
+
+Then repeat for other browsers
+
+Firefox
+Create a new class called FirefoxWebdriver 
+![image](https://github.com/user-attachments/assets/b99c8f3f-782e-4f42-a7d5-8de399d05b81)
+
+
+Create interface class within Abstraction folder called IFirefox WebDriver 
+![image](https://github.com/user-attachments/assets/dfd4dc68-1527-441e-b3f3-ef4154dd49fe)
+
+
+Within WebUI -> rename the containerconfig to CoreContainerConfig 
+![image](https://github.com/user-attachments/assets/8107fbc7-f308-43b9-83ad-e1630dbeedc8)
+
+within this file we will create an new method called SetContainer which will reference our chrome and firefox interfaces 
+![image](https://github.com/user-attachments/assets/dd2fc54a-8a35-46c3-a6c6-0717dac00e04)
+
+next within ContainerConfig within DemoUI containerConfig , we will reference the CoreContainerConfig which will reference our 2 browsers 
+![image](https://github.com/user-attachments/assets/d8c2bf0a-427c-4182-b3a8-583b8d1590d8)
+
+
+Create a new folder called Hooks 
+Within this folder create a class called SpecFlowBase within WebUI Project
+![image](https://github.com/user-attachments/assets/01f160d1-7a44-4093-a1f5-63f2a71e3a5d)
+
+SpecflowBase.cs 
+the class below will use the browser interfaces within our switch statement which will look within the global Properties file for browser type and select the matching browserType before the Scenario runs
+![image](https://github.com/user-attachments/assets/de10462c-5893-4ecf-9f58-2b0be572eec8)
+
+in order to use this Specflowbase with our scenario , we will add WebDriver to our Login Step class 
+![image](https://github.com/user-attachments/assets/a51d6fe4-3895-475b-9cad-7a9ce9d53d86)
+
+We can now update and replace the WebDriver steps on Login Page which will use the Webdriver switch and browser interfaces created 
+![image](https://github.com/user-attachments/assets/e9f4f340-73b7-4a53-8a54-c767234143db)
 
 
 

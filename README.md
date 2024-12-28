@@ -496,6 +496,7 @@ Within this folder create a class called SpecFlowBase within WebUI Project
 ![image](https://github.com/user-attachments/assets/01f160d1-7a44-4093-a1f5-63f2a71e3a5d)
 
 SpecflowBase.cs 
+the class below will use the browser interfaces within our switch statement which will look within the global Properties file for browser type and select the matching browserType before the Scenario runs
 ![image](https://github.com/user-attachments/assets/de10462c-5893-4ecf-9f58-2b0be572eec8)
 
 

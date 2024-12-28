@@ -495,4 +495,8 @@ Create a new folder called Hooks
 Within this folder create a class called SpecFlowBase within WebUI Project
 ![image](https://github.com/user-attachments/assets/01f160d1-7a44-4093-a1f5-63f2a71e3a5d)
 
+SpecflowBase.cs 
+![image](https://github.com/user-attachments/assets/de10462c-5893-4ecf-9f58-2b0be572eec8)
+
+
 

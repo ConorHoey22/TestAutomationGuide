@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,11 +17,11 @@ namespace TestAutomationFramework.DemoUi.Steps
         LoginPage _loginPage;
         IAtConfiguration _iatConfiguration;
 
-        public LoginSteps(IAtConfiguration iatConfiguration) 
+        public LoginSteps(IAtConfiguration iatConfiguration , IWebDriver webDriver) 
         { 
         
             _iatConfiguration = iatConfiguration; 
-            _loginPage = new LoginPage(_iatConfiguration);  
+            _loginPage = new LoginPage(_iatConfiguration , webDriver);  
         
         }
 

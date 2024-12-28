@@ -17,7 +17,7 @@ namespace TestAutomationFramework.DemoUI.Test
             //GlobalProperties globalProperties = new GlobalProperties();
             //globalProperties.Configuration();
 
-            IServiceProvider iserviceProvider = ContainerConfig.ContainerServices();
+            IServiceProvider iserviceProvider = CoreContainerConfig.ContainerServices();
             
             IGlobalProperties globalProperties = iserviceProvider.GetRequiredService<IGlobalProperties>();
             //globalProperties.Configuration();

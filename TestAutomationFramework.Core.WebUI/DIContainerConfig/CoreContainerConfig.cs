@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BoDi;
+using Microsoft.Extensions.DependencyInjection;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,11 @@ using TestAutomationFramework.Core.WebUI.Abstraction;
 using TestAutomationFramework.Core.WebUI.Params;
 using TestAutomationFramework.Core.WebUI.Reports;
 using TestAutomationFramework.Core.WebUI.Runner;
+using TestAutomationFramework.Core.WebUI.Selenium.LocalWebDrivers;
 
 namespace TestAutomationFramework.Core.WebUI.DIContainerConfig
 {
-    public class ContainerConfig
+    public class CoreContainerConfig
     {
 
         public static IServiceProvider ContainerServices()
@@ -33,6 +36,13 @@ namespace TestAutomationFramework.Core.WebUI.DIContainerConfig
         }
 
 
+        public static IObjectContainer SetContainer(IObjectContainer iobjectContainer)
+        {
+            iobjectContainer.RegisterTypeAs<ChromeWebDriver,IChromeWebDriver>();
+            iobjectContainer.RegisterTypeAs<FirefoxWebDriver, IFirefoxWebDriver>();
+            return iobjectContainer;
+        }
 
     }
+
 }

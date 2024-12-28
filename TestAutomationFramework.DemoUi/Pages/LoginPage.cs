@@ -12,18 +12,22 @@ namespace TestAutomationFramework.DemoUi.Pages
 {
     public class LoginPage
     {
-        IWebDriver webDriver;
+        IWebDriver _iwebDriver;
 
         IAtConfiguration _iatConfiguration;
 
-        IWebElement Username => webDriver.FindElement(By.XPath("//input[@id='user-name']"));
-        IWebElement Password => webDriver.FindElement(By.XPath("//input[@id='password']"));
-        IWebElement Login => webDriver.FindElement(By.XPath("//input[@id='login-button']"));
+        IWebElement Username => _iwebDriver.FindElement(By.XPath("//input[@id='user-name']"));
+        IWebElement Password => _iwebDriver.FindElement(By.XPath("//input[@id='password']"));
+        IWebElement Login => _iwebDriver.FindElement(By.XPath("//input[@id='login-button']"));
 
-        public LoginPage(IAtConfiguration iatConfiguration) 
+        public LoginPage(IAtConfiguration iatConfiguration,IWebDriver webDriver) 
         {
-            new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
-            webDriver = new ChromeDriver();
+            //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+
+            //_iwebDriver = new ChromeDriver();
+
+            _iwebDriver = webDriver;
+
             webDriver.Manage().Window.Maximize();
             _iatConfiguration = iatConfiguration;    
 
@@ -35,7 +39,7 @@ namespace TestAutomationFramework.DemoUi.Pages
 
             string url = _iatConfiguration.GetConfiguration("url");
 
-            webDriver.Navigate().GoToUrl(url);
+            _iwebDriver.Navigate().GoToUrl(url);
       
             Username.SendKeys(username);
             Password.SendKeys(password);
@@ -50,7 +54,7 @@ namespace TestAutomationFramework.DemoUi.Pages
             string url = _iatConfiguration.GetConfiguration("url");
 
 
-            webDriver.Navigate().GoToUrl(url);
+            _iwebDriver.Navigate().GoToUrl(url);
 
 
             Username.SendKeys(username);

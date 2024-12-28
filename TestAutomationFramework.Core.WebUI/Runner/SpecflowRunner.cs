@@ -21,7 +21,7 @@ namespace TestAutomationFramework.Core.WebUI.Runner
         {
 
             //Call the Container Config 
-            _iserviceProvider = ContainerConfig.ContainerServices();
+            _iserviceProvider = CoreContainerConfig.ContainerServices();
         }
     }
 }

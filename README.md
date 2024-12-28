@@ -511,4 +511,10 @@ We can now update and replace the WebDriver steps on Login Page which will use t
 ![image](https://github.com/user-attachments/assets/780b2447-0c5d-4a0b-ba64-1286205a941d)
 
 
+--- StaleElement --- 
+
+![image](https://github.com/user-attachments/assets/c32c2b8c-374e-4450-b2e8-17eeedf35fa8)
+
+
+
 

@@ -499,5 +499,11 @@ SpecflowBase.cs
 the class below will use the browser interfaces within our switch statement which will look within the global Properties file for browser type and select the matching browserType before the Scenario runs
 ![image](https://github.com/user-attachments/assets/de10462c-5893-4ecf-9f58-2b0be572eec8)
 
+in order to use this Specflowbase with our scenario , we will add WebDriver to our Login Step class 
+![image](https://github.com/user-attachments/assets/a51d6fe4-3895-475b-9cad-7a9ce9d53d86)
+
+We can now update and replace the WebDriver steps on Login Page which will use the Webdriver switch and browser interfaces created 
+![image](https://github.com/user-attachments/assets/e9f4f340-73b7-4a53-8a54-c767234143db)
+
 
 

@@ -506,4 +506,9 @@ We can now update and replace the WebDriver steps on Login Page which will use t
 ![image](https://github.com/user-attachments/assets/e9f4f340-73b7-4a53-8a54-c767234143db)
 
 
+---- Example of Explicit Wait and logging--- 
+
+![image](https://github.com/user-attachments/assets/780b2447-0c5d-4a0b-ba64-1286205a941d)
+
+
 

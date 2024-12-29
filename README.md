@@ -539,10 +539,10 @@ Add a method to our DefaultVariables class , which will show direct the program 
 update the IDefault interface class so that we can inherit the method using 
 ![image](https://github.com/user-attachments/assets/92a16085-b0ad-420e-b45a-cc570c05671a)
 
- intializeExtentReport 
+intializeExtentReport 
 ![image](https://github.com/user-attachments/assets/4c7f4f36-d1d8-4bde-980c-b4b6948888f2)
 
-
+Now we can inherit ExtentReport object within GlobalProperties 
 
 
 

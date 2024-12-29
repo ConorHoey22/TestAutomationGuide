@@ -516,5 +516,38 @@ We can now update and replace the WebDriver steps on Login Page which will use t
 ![image](https://github.com/user-attachments/assets/c32c2b8c-374e-4450-b2e8-17eeedf35fa8)
 
 
+--- Using ExtentReport --- 
+
+This can be used for a visual display/ Reports 
+
+Download Nuget Package : ExtentReport Core 
+
+Create a new Class within Web UI project -> Reports folder called ExtentReports 
+Create its interface class aswell -> Abstraction -> Create class called IExtendReports 
+Then aswell we need to add it to are ServiceProvider interface 
+![image](https://github.com/user-attachments/assets/8d62d976-d6bc-479a-a1a6-2485bcbbb82b)
 
 
+
+
+Within our ExtentReport class let create a method called intializeExtentReport 
+in this method we wil create the ExtentHtmlReporter object which will be used to provide a filepath to store the report using our DefaultVariables class 
+
+Add a method to our DefaultVariables class , which will show direct the program to the folder and it will create a .html page 
+![image](https://github.com/user-attachments/assets/f0f2d51b-3b7b-4770-9d47-2930a5b12ac8
+
+update the IDefault interface class so that we can inherit the method using 
+![image](https://github.com/user-attachments/assets/92a16085-b0ad-420e-b45a-cc570c05671a)
+
+ intializeExtentReport 
+![image](https://github.com/user-attachments/assets/4c7f4f36-d1d8-4bde-980c-b4b6948888f2)
+
+
+
+
+
+
+
+
+
+ 

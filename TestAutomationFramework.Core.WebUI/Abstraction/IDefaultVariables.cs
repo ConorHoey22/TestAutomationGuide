@@ -9,6 +9,7 @@ namespace TestAutomationFramework.Core.WebUI.Abstraction
     public interface IDefaultVariables
     {
         string getLog { get; }
+        string getExtentReport { get; }
 
         string getFrameworkSettings { get; }
         string getApplicationSettings { get; }

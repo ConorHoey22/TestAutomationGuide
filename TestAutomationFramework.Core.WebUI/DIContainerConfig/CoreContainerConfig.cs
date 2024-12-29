@@ -27,6 +27,7 @@ namespace TestAutomationFramework.Core.WebUI.DIContainerConfig
             //creating a service to request the object  <interface , Class  >
             services.AddSingleton<IDefaultVariables, DefaultVariables>();
             services.AddSingleton<ILogging, Logging>();
+            services.AddSingleton<IExtentReport, ExtentReport>();
             services.AddSingleton<IGlobalProperties, GlobalProperties>();
 
 

@@ -29,6 +29,15 @@ namespace TestAutomationFramework.Core.WebUI.Params
         }
 
 
+        public string getExtentReport
+        {
+            get
+            {
+                return getReport + "\\log.txt";
+            }
+        }
+
+
         public string getFrameworkSettings
         {
 

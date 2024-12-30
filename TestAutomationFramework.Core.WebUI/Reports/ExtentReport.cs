@@ -1,5 +1,4 @@
-﻿using AventStack.ExtentReports.Reporter;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,20 +7,42 @@ using TestAutomationFramework.Core.WebUI.Abstraction;
 
 namespace TestAutomationFramework.Core.WebUI.Reports
 {
-    public class ExtentReport : IExtentReport
+    public class ExtentReports : IExtentReports
     {
-        IDefaultVariables _idefaultVariables;
+        IExtentFeatureReport _iextentFeatureReport;
+        AventStack.ExtentReports.ExtentTest _feature,_scenario;
 
-        public ExtentReport(IDefaultVariables idefaultVariable) 
-        { 
-            _idefaultVariables = idefaultVariable;
-        }   
-
-        public void intializeExtentReport()
+        public ExtentReports(IExtentFeatureReport iextentFeatureReport) 
         {
-            ExtentHtmlReporter extentHtmlReporter = new ExtentHtmlReporter(_idefaultVariables.getExtentReport); // File path to store reports using our DefaultVartiables object
-            AventStack.ExtentReports.ExtentReports extentReports = new AventStack.ExtentReports.ExtentReports();
-            extentReports.AttachReporter(extentHtmlReporter);   
+            _iextentFeatureReport = iextentFeatureReport;    
+        }
+        public void CreateFeature(string featureName) 
+        {
+            _feature = _iextentFeatureReport.GetExtentReports().CreateTest(featureName);
+        }
+
+        public void CreateScenario(string scenarioName)
+        {
+            _scenario = _feature.CreateNode(scenarioName);  
+        }
+
+        public void Pass(string msg)
+        {
+            _scenario.Log(AventStack.ExtentReports.Status.Pass, msg);
+        }
+
+        public void Fail(string msg)
+        {
+            _scenario.Log(AventStack.ExtentReports.Status.Fail, msg);
+        }
+        public void Warning(string msg)
+        {
+            _scenario.Log(AventStack.ExtentReports.Status.Warning, msg);
+        }
+
+        public void Fatal(string msg)
+        {
+            _scenario.Log(AventStack.ExtentReports.Status.Fatal, msg);
         }
     }
 }

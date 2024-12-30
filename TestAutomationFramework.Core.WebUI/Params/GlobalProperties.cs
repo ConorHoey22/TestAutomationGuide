@@ -15,6 +15,7 @@ namespace TestAutomationFramework.Core.WebUI.Params
 
         IDefaultVariables _idefaultVariables;
         ILogging _ilogging;
+        IExtentFeatureReport _iextentFeatureReport;
 
 
 
@@ -39,10 +40,11 @@ namespace TestAutomationFramework.Core.WebUI.Params
 
 
 
-        public GlobalProperties(IDefaultVariables idefaultVariables , ILogging ilogging)
+        public GlobalProperties(IDefaultVariables idefaultVariables , ILogging ilogging, IExtentFeatureReport iextentFeatureReport)
         {
             _idefaultVariables = idefaultVariables;
             _ilogging = ilogging;
+            _iextentFeatureReport = iextentFeatureReport;
             Configuration();
         }   
 
@@ -76,7 +78,7 @@ namespace TestAutomationFramework.Core.WebUI.Params
                  dataSetLocation = string.IsNullOrEmpty(configBuilder["DataSetLocation"]) ? _idefaultVariables.dataSetLocation : configBuilder["DataSetLocation"];
                  downloadedLocation = string.IsNullOrEmpty(configBuilder["DataSetLocation"]) ? _idefaultVariables.dataSetLocation : configBuilder["DownloadedLocation"];
 
-
+            _iextentFeatureReport.InitiliazeExtentReport();
             _ilogging.LogLevel(logLevel);
             _ilogging.Information("Configuration Settings");
             _ilogging.Information("Browser: " + browsertype);

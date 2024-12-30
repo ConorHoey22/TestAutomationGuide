@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestAutomationFramework.Core.WebUI.Abstraction
 {
-    public interface IExtentReport
+    public interface IExtentFeatureReport
     {
-
+        void InitiliazeExtentReport();
+        AventStack.ExtentReports.ExtentReports GetExtentReports();
     }
 }

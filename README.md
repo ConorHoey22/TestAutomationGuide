@@ -544,11 +544,17 @@ Now we can inherit ExtentFeatureReports object within GlobalProperties and use t
 
 ![image](https://github.com/user-attachments/assets/4702382a-7039-402b-9355-5ec86fec1c2f)
 
-
 Create another class which will he used to create variable requrired for our reports 
 ![image](https://github.com/user-attachments/assets/c23047f7-3ccb-4796-a3a8-e91c0af35e68)
 
 Create the linked interface for this aswell and allow the inheritance of methods
 ![image](https://github.com/user-attachments/assets/178d6129-9524-49b5-9b06-e5c6dad37522)
+
+Update the SpecflowRunner and then add globalproperties to the serviceprovider BeforeTest
+![image](https://github.com/user-attachments/assets/5541475f-8d8a-45cc-b1e7-dbe13443f724)
+
+Update the Iserviceprovider Interface and add the ExtentReport Interfacce to the service provider using AddTransient as this will mean each feature report is unique 
+![image](https://github.com/user-attachments/assets/7a96fa77-49df-43e5-a246-854827d7fee1)
+
 
  

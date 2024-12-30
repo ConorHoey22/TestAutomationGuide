@@ -556,5 +556,10 @@ Update the SpecflowRunner and then add globalproperties to the serviceprovider B
 Update the Iserviceprovider Interface and add the ExtentReport Interfacce to the service provider using AddTransient as this will mean each feature report is unique 
 ![image](https://github.com/user-attachments/assets/7a96fa77-49df-43e5-a246-854827d7fee1)
 
+Within the SpecflowRunner -> Create a BeforeFeature Method which defines the report and the FeatureInfo 
+![image](https://github.com/user-attachments/assets/5b083d5a-34fa-4f7e-b509-9ef4a88f2687)
+
+After Scenario needed for to close. also may need to add iwebdriver to close browsers?
+
 
  

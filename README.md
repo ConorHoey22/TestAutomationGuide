@@ -522,32 +522,33 @@ This can be used for a visual display/ Reports
 
 Download Nuget Package : ExtentReport Core 
 
-Create a new Class within Web UI project -> Reports folder called ExtentReports 
-Create its interface class aswell -> Abstraction -> Create class called IExtendReports 
+Create a new Class within Web UI project -> Reports folder called ExtentFeatureReports 
+Create its interface class aswell -> Abstraction -> Create class called IExtendFeatureReports 
 Then aswell we need to add it to are ServiceProvider interface 
-![image](https://github.com/user-attachments/assets/8d62d976-d6bc-479a-a1a6-2485bcbbb82b)
 
 
-
-
-Within our ExtentReport class let create a method called intializeExtentReport 
+Within our ExtentFeatureReports class let create a method called intializeExtentReport 
 in this method we wil create the ExtentHtmlReporter object which will be used to provide a filepath to store the report using our DefaultVariables class 
 
 Add a method to our DefaultVariables class , which will show direct the program to the folder and it will create a .html page 
-![image](https://github.com/user-attachments/assets/f0f2d51b-3b7b-4770-9d47-2930a5b12ac8
+
 
 update the IDefault interface class so that we can inherit the method using 
-![image](https://github.com/user-attachments/assets/92a16085-b0ad-420e-b45a-cc570c05671a)
+
 
 intializeExtentReport 
-![image](https://github.com/user-attachments/assets/4c7f4f36-d1d8-4bde-980c-b4b6948888f2)
-
-Now we can inherit ExtentReport object within GlobalProperties 
 
 
+Now we can inherit ExtentFeatureReports object within GlobalProperties and use the our intialize method within our Configuration method 
+![image](https://github.com/user-attachments/assets/17f370a4-e291-4251-b3a5-0309898f9b8c)
+
+![image](https://github.com/user-attachments/assets/4702382a-7039-402b-9355-5ec86fec1c2f)
 
 
+Create another class which will he used to create variable requrired for our reports 
+![image](https://github.com/user-attachments/assets/c23047f7-3ccb-4796-a3a8-e91c0af35e68)
 
-
+Create the linked interface for this aswell and allow the inheritance of methods
+![image](https://github.com/user-attachments/assets/178d6129-9524-49b5-9b06-e5c6dad37522)
 
  

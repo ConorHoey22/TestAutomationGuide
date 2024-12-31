@@ -506,6 +506,44 @@ We can now update and replace the WebDriver steps on Login Page which will use t
 ![image](https://github.com/user-attachments/assets/e9f4f340-73b7-4a53-8a54-c767234143db)
 
 
+--- WebDriver Interface --- 
+
+Create a folder called DriversContext
+Create a new Class called Drivers 
+Create a constructor 
+Inherit IChromeWebdriver , IFirefoxWebdriver , IGlobalProperties and IWebdriver
+Create a method called GetWebdrivers - This will be used to check if a webdriver has been defined or not  
+![image](https://github.com/user-attachments/assets/27e7ee22-b217-43f2-88da-cb7a12163d3d)
+
+
+Create a Method called GetNewWebDriver  - This is our Switch cases that was previously created wtihin 
+![image](https://github.com/user-attachments/assets/4f592cb5-74f8-48ee-8f53-26285ba8a199)
+
+Create an interface for Drivers called IDrivers and attach the Method IWebDriver GetWebDrivers
+![image](https://github.com/user-attachments/assets/2e38fb07-8887-4ea7-bd56-ae6e2010f310)
+
+Within CoreContainerConfig , define the relationship between the objects 
+![image](https://github.com/user-attachments/assets/cf397438-d854-4821-ab8a-b3152d88ef7f)
+
+Now we need to update our BeforeScenario Method within our SpecflowBase class and remove the switch case as it will now be called using idrivers 
+![image](https://github.com/user-attachments/assets/7115f80e-9c2f-44db-b2ba-0d120252a1b2)
+
+Update LoginSteps and LoginPage Class
+
+LoginSteps
+![image](https://github.com/user-attachments/assets/546fc735-8ce6-447d-b156-47d2a9745581)
+
+LoginPage 
+![image](https://github.com/user-attachments/assets/9f6db634-5b22-444e-b3db-04206481fb64)
+
+Now that we have a Driver class and interface , can create Driver operations method to for example , Close , Maximise the tab 
+![image](https://github.com/user-attachments/assets/99628b46-0276-43b0-8e64-ad01a6f1c5de)
+
+Always remember to declare the method within the interface so that the method can be inherited 
+![image](https://github.com/user-attachments/assets/3cf631cc-cb2c-4e34-b493-ba2557987dda)
+
+
+
 ---- Example of Explicit Wait and logging--- 
 
 ![image](https://github.com/user-attachments/assets/780b2447-0c5d-4a0b-ba64-1286205a941d)
@@ -544,11 +582,39 @@ Now we can inherit ExtentFeatureReports object within GlobalProperties and use t
 
 ![image](https://github.com/user-attachments/assets/4702382a-7039-402b-9355-5ec86fec1c2f)
 
-
 Create another class which will he used to create variable requrired for our reports 
 ![image](https://github.com/user-attachments/assets/c23047f7-3ccb-4796-a3a8-e91c0af35e68)
 
 Create the linked interface for this aswell and allow the inheritance of methods
 ![image](https://github.com/user-attachments/assets/178d6129-9524-49b5-9b06-e5c6dad37522)
+
+Update the SpecflowRunner and then add globalproperties to the serviceprovider BeforeTest
+![image](https://github.com/user-attachments/assets/5541475f-8d8a-45cc-b1e7-dbe13443f724)
+
+Update the Iserviceprovider Interface and add the ExtentReport Interface to the service provider using AddTransient as this will mean each feature report is unique 
+![image](https://github.com/user-attachments/assets/7a96fa77-49df-43e5-a246-854827d7fee1)
+
+Within the SpecflowRunner -> Create a BeforeFeature Method which defines the report and the FeatureInfo 
+![image](https://github.com/user-attachments/assets/5b083d5a-34fa-4f7e-b509-9ef4a88f2687)
+
+After Scenario - which will be used to close the browser by inherting the CloseBrowser Driver operations method 
+![image](https://github.com/user-attachments/assets/9adbf2bb-dd57-4fdb-be07-b17e790de1e9)
+
+Update BeforeScenario so that we aredeclaring extentreport BeforeScenario starts which will allow us to get the scenario info
+![image](https://github.com/user-attachments/assets/0639d936-8da5-40d2-9093-5efd25f13855)
+
+Create a new method called AfterStep which will define the StepInfo as Pass or Fail if there is an error after every step
+![image](https://github.com/user-attachments/assets/cdce89ad-2251-4b08-b87e-8fa2e3abd7fa)
+
+We need to create a Flush method 
+
+Create our Flush Method within the ExtentFeatureReport class and also declare in our IExtentFeatureReport interface to call the method
+![image](https://github.com/user-attachments/assets/3e569101-c203-4b5b-b948-2f54cdfd4e4c)
+
+![image](https://github.com/user-attachments/assets/66dacd5b-0710-4427-b2b6-f86ced3add46)
+
+update AfterScenario within SpecflowBase class 
+![image](https://github.com/user-attachments/assets/4de7f93c-4a48-4a45-84bf-104a6b461641)
+
 
  

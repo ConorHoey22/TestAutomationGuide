@@ -19,7 +19,8 @@ namespace TestAutomationFramework.Core.WebUI.Hooks
         IGlobalProperties iglobalProperties;
         IChromeWebDriver _ichromeWebDriver;
         IFirefoxWebDriver _ifirefoxWebDriver;
-
+        IDrivers _idrivers;
+        ScenarioContext _scenarioContext;
 
 
         public SpecflowBase(IChromeWebDriver _chromeWebDriver, IFirefoxWebDriver _firefoxWebDriver)
@@ -32,29 +33,38 @@ namespace TestAutomationFramework.Core.WebUI.Hooks
 
 
         [BeforeScenario(Order = 2)]
-        public void BeforeScenario(IObjectContainer iobjectcontainer)
+        public void BeforeScenario(IObjectContainer iobjectcontainer , ScenarioContext scenarioContext, FeatureContext fc)
         {
-            IWebDriver iwebDriver;
 
-            iglobalProperties = SpecflowRunner._iserviceProvider.GetRequiredService<IGlobalProperties>();
+            _idrivers = iobjectcontainer.Resolve<IDrivers>();
+            _scenarioContext = scenarioContext;
+            IExtentReport extentReport = (IExtentReport) fc["iextentreport"];
+            extentReport.CreateScenario(scenarioContext.ScenarioInfo.Title);
 
-            switch(iglobalProperties.browsertype.ToLower())
-            {
-                case "chrome":
-                    iwebDriver = _ichromeWebDriver.GetChromeWebDriver(); 
-                    break;
-                case "firefox": 
-                    iwebDriver = _ifirefoxWebDriver.GetFirefoxWebDriver();
-                    break;
-                default:
-                    iwebDriver = _ichromeWebDriver.GetChromeWebDriver();
-                    break;
-
-            }
-
-            iobjectcontainer.RegisterInstanceAs(iwebDriver);
         }
 
+        public void AfterStep(ScenarioContext scenarioContext, FeatureContext fc)
+        {
+            IExtentReport extentReport = (IExtentReport)fc["iextentreport"];
+            
+            if(scenarioContext.TestError !=null)
+            {
+                extentReport.Fail(scenarioContext.StepContext.StepInfo.Text);
+            }
+            else 
+            {
+                extentReport.Pass(scenarioContext.StepContext.StepInfo.Text);    
+            }
+        }
+
+        [AfterScenario]
+        public void AfterScenario(ScenarioContext sc, FeatureContext fc)
+        {
+            IExtentFeatureReport extentReport = SpecflowRunner._iserviceProvider.GetRequiredService<IExtentFeatureReport>();
+            extentReport.FlushExtent();
+            Thread.Sleep(1000);
+            _idrivers.CloseBrowser();
+        }
 
     }
 }

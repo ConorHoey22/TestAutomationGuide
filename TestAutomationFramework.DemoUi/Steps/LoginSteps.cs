@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using TestAutomationFramework.Core.WebUI.Abstraction;
 using TestAutomationFramework.DemoUi.Pages;
 using TestAutomationFramework.DemoUi.WebAbstraction;
 
@@ -17,11 +18,11 @@ namespace TestAutomationFramework.DemoUi.Steps
         LoginPage _loginPage;
         IAtConfiguration _iatConfiguration;
 
-        public LoginSteps(IAtConfiguration iatConfiguration , IWebDriver webDriver) 
+        public LoginSteps(IAtConfiguration iatConfiguration , IDrivers idrivers) 
         { 
         
             _iatConfiguration = iatConfiguration; 
-            _loginPage = new LoginPage(_iatConfiguration , webDriver);  
+            _loginPage = new LoginPage(_iatConfiguration , idrivers);  
         
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestAutomationFramework.Core.WebUI.Abstraction
 {
-    public interface IExtentReports
+    public interface IExtentReport
     {
         void CreateFeature(string featureName);
         void CreateScenario(string scenarioName);

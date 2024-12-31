@@ -7,12 +7,12 @@ using TestAutomationFramework.Core.WebUI.Abstraction;
 
 namespace TestAutomationFramework.Core.WebUI.Reports
 {
-    public class ExtentReports : IExtentReports
+    public class ExtentReport : IExtentReport
     {
         IExtentFeatureReport _iextentFeatureReport;
         AventStack.ExtentReports.ExtentTest _feature,_scenario;
 
-        public ExtentReports(IExtentFeatureReport iextentFeatureReport) 
+        public ExtentReport(IExtentFeatureReport iextentFeatureReport) 
         {
             _iextentFeatureReport = iextentFeatureReport;    
         }

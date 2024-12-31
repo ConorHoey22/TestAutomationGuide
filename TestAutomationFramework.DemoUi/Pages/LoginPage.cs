@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestAutomationFramework.Core.WebUI.Abstraction;
 using TestAutomationFramework.DemoUi.WebAbstraction;
 using WebDriverManager.DriverConfigs.Impl;
 
@@ -20,16 +21,13 @@ namespace TestAutomationFramework.DemoUi.Pages
         IWebElement Password => _iwebDriver.FindElement(By.XPath("//input[@id='password']"));
         IWebElement Login => _iwebDriver.FindElement(By.XPath("//input[@id='login-button']"));
 
-        public LoginPage(IAtConfiguration iatConfiguration,IWebDriver webDriver) 
+        public LoginPage(IAtConfiguration iatConfiguration,IDrivers idriver) 
         {
-            //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
 
-            //_iwebDriver = new ChromeDriver();
+            _iatConfiguration = iatConfiguration;
 
-            _iwebDriver = webDriver;
-
-            webDriver.Manage().Window.Maximize();
-            _iatConfiguration = iatConfiguration;    
+            _iwebDriver = idriver.GetWebDriver();
+            _iwebDriver.Manage().Window.Maximize();
 
         }  
 

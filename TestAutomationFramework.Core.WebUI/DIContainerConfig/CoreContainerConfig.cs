@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestAutomationFramework.Core.WebUI.Abstraction;
+using TestAutomationFramework.Core.WebUI.DriverContext;
 using TestAutomationFramework.Core.WebUI.Params;
 using TestAutomationFramework.Core.WebUI.Reports;
 using TestAutomationFramework.Core.WebUI.Runner;
@@ -28,7 +29,7 @@ namespace TestAutomationFramework.Core.WebUI.DIContainerConfig
             services.AddSingleton<IDefaultVariables, DefaultVariables>();
             services.AddSingleton<ILogging, Logging>();
             services.AddSingleton<IExtentFeatureReport, ExtentFeatureReport>();
-
+            services.AddTransient<IExtentReport, ExtentReport>(); // allows Unique reports per feature / multiple
             services.AddSingleton<IGlobalProperties, GlobalProperties>();
 
 
@@ -42,6 +43,7 @@ namespace TestAutomationFramework.Core.WebUI.DIContainerConfig
         {
             iobjectContainer.RegisterTypeAs<ChromeWebDriver,IChromeWebDriver>();
             iobjectContainer.RegisterTypeAs<FirefoxWebDriver, IFirefoxWebDriver>();
+            iobjectContainer.RegisterTypeAs<Drivers , IDrivers>();
             return iobjectContainer;
         }
 

@@ -29,5 +29,10 @@ namespace TestAutomationFramework.Core.WebUI.Reports
         {
             return extentReports;
         }
+
+        public void FlushExtent()
+        {
+            extentReports.Flush();
+        }
     }
 }

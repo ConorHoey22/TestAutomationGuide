@@ -9,6 +9,9 @@ namespace TestAutomationFramework.Core.WebUI.Abstraction
     public interface IExtentFeatureReport
     {
         void InitiliazeExtentReport();
+    
         AventStack.ExtentReports.ExtentReports GetExtentReports();
+
+        void FlushExtent();
     }
 }

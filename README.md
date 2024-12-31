@@ -536,6 +536,9 @@ LoginSteps
 LoginPage 
 ![image](https://github.com/user-attachments/assets/9f6db634-5b22-444e-b3db-04206481fb64)
 
+Now that we have a Driver class and interface , can create Driver operations method to for example , Close , Maximise the tab 
+![image](https://github.com/user-attachments/assets/99628b46-0276-43b0-8e64-ad01a6f1c5de)
+
 
 ---- Example of Explicit Wait and logging--- 
 
@@ -589,8 +592,6 @@ Update the Iserviceprovider Interface and add the ExtentReport Interfacce to the
 
 Within the SpecflowRunner -> Create a BeforeFeature Method which defines the report and the FeatureInfo 
 ![image](https://github.com/user-attachments/assets/5b083d5a-34fa-4f7e-b509-9ef4a88f2687)
-
-
 
 After Scenario needed for to close. also may need to add iwebdriver to close browsers?
 

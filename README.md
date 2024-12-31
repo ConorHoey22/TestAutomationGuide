@@ -539,6 +539,10 @@ LoginPage
 Now that we have a Driver class and interface , can create Driver operations method to for example , Close , Maximise the tab 
 ![image](https://github.com/user-attachments/assets/99628b46-0276-43b0-8e64-ad01a6f1c5de)
 
+Always remember to declare the method within the interface so that the method can be inherited 
+![image](https://github.com/user-attachments/assets/3cf631cc-cb2c-4e34-b493-ba2557987dda)
+
+
 
 ---- Example of Explicit Wait and logging--- 
 
@@ -593,7 +597,26 @@ Update the Iserviceprovider Interface and add the ExtentReport Interfacce to the
 Within the SpecflowRunner -> Create a BeforeFeature Method which defines the report and the FeatureInfo 
 ![image](https://github.com/user-attachments/assets/5b083d5a-34fa-4f7e-b509-9ef4a88f2687)
 
-After Scenario needed for to close. also may need to add iwebdriver to close browsers?
+After Scenario - which will be used to close the browser by inherting the CloseBrowser Driver operations method 
+![image](https://github.com/user-attachments/assets/9adbf2bb-dd57-4fdb-be07-b17e790de1e9)
 
+Update BeforeScenario so that we aredeclaring extentreport BeforeScenario starts which will allow us to get the scenario info
+![image](https://github.com/user-attachments/assets/0639d936-8da5-40d2-9093-5efd25f13855)
+
+Create a new method called AfterStep which will define the StepInfo as Pass or Fail if there is an error after every step
+![image](https://github.com/user-attachments/assets/cdce89ad-2251-4b08-b87e-8fa2e3abd7fa)
+
+
+We need to create a Flush method  but first we must declare IExtentFeatureReport in our constructor and at class level 
+![image](https://github.com/user-attachments/assets/17fa5d6c-c48d-431d-bd4d-881951b4b094)
+
+Create our Flush Method within the ExtentFeatureReport class and also declare in our IExtentFeatureReport interface to call the method
+![image](https://github.com/user-attachments/assets/3e569101-c203-4b5b-b948-2f54cdfd4e4c)
+
+![image](https://github.com/user-attachments/assets/66dacd5b-0710-4427-b2b6-f86ced3add46)
+
+update AfterScenario within SpecflowBase class 
+
+![image](https://github.com/user-attachments/assets/27a2a9a4-de43-452c-b0ef-9bffc84b01a8)
 
  

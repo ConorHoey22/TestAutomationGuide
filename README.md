@@ -506,6 +506,37 @@ We can now update and replace the WebDriver steps on Login Page which will use t
 ![image](https://github.com/user-attachments/assets/e9f4f340-73b7-4a53-8a54-c767234143db)
 
 
+--- WebDriver Interface --- 
+
+Create a folder called DriversContext
+Create a new Class called Drivers 
+Create a constructor 
+Inherit IChromeWebdriver , IFirefoxWebdriver , IGlobalProperties and IWebdriver
+Create a method called GetWebdrivers - This will be used to check if a webdriver has been defined or not  
+![image](https://github.com/user-attachments/assets/27e7ee22-b217-43f2-88da-cb7a12163d3d)
+
+
+Create a Method called GetNewWebDriver  - This is our Switch cases that was previously created wtihin 
+![image](https://github.com/user-attachments/assets/4f592cb5-74f8-48ee-8f53-26285ba8a199)
+
+Create an interface for Drivers called IDrivers and attach the Method IWebDriver GetWebDrivers
+![image](https://github.com/user-attachments/assets/2e38fb07-8887-4ea7-bd56-ae6e2010f310)
+
+Within CoreContainerConfig , define the relationship between the objects 
+![image](https://github.com/user-attachments/assets/cf397438-d854-4821-ab8a-b3152d88ef7f)
+
+Now we need to update our BeforeScenario Method within our SpecflowBase class and remove the switch case as it will now be called using idrivers 
+![image](https://github.com/user-attachments/assets/7115f80e-9c2f-44db-b2ba-0d120252a1b2)
+
+Update LoginSteps and LoginPage Class
+
+LoginSteps
+![image](https://github.com/user-attachments/assets/546fc735-8ce6-447d-b156-47d2a9745581)
+
+LoginPage 
+![image](https://github.com/user-attachments/assets/9f6db634-5b22-444e-b3db-04206481fb64)
+
+
 ---- Example of Explicit Wait and logging--- 
 
 ![image](https://github.com/user-attachments/assets/780b2447-0c5d-4a0b-ba64-1286205a941d)
@@ -558,6 +589,8 @@ Update the Iserviceprovider Interface and add the ExtentReport Interfacce to the
 
 Within the SpecflowRunner -> Create a BeforeFeature Method which defines the report and the FeatureInfo 
 ![image](https://github.com/user-attachments/assets/5b083d5a-34fa-4f7e-b509-9ef4a88f2687)
+
+
 
 After Scenario needed for to close. also may need to add iwebdriver to close browsers?
 

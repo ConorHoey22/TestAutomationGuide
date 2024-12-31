@@ -591,7 +591,7 @@ Create the linked interface for this aswell and allow the inheritance of methods
 Update the SpecflowRunner and then add globalproperties to the serviceprovider BeforeTest
 ![image](https://github.com/user-attachments/assets/5541475f-8d8a-45cc-b1e7-dbe13443f724)
 
-Update the Iserviceprovider Interface and add the ExtentReport Interfacce to the service provider using AddTransient as this will mean each feature report is unique 
+Update the Iserviceprovider Interface and add the ExtentReport Interface to the service provider using AddTransient as this will mean each feature report is unique 
 ![image](https://github.com/user-attachments/assets/7a96fa77-49df-43e5-a246-854827d7fee1)
 
 Within the SpecflowRunner -> Create a BeforeFeature Method which defines the report and the FeatureInfo 
@@ -606,9 +606,7 @@ Update BeforeScenario so that we aredeclaring extentreport BeforeScenario starts
 Create a new method called AfterStep which will define the StepInfo as Pass or Fail if there is an error after every step
 ![image](https://github.com/user-attachments/assets/cdce89ad-2251-4b08-b87e-8fa2e3abd7fa)
 
-
-We need to create a Flush method  but first we must declare IExtentFeatureReport in our constructor and at class level 
-![image](https://github.com/user-attachments/assets/17fa5d6c-c48d-431d-bd4d-881951b4b094)
+We need to create a Flush method 
 
 Create our Flush Method within the ExtentFeatureReport class and also declare in our IExtentFeatureReport interface to call the method
 ![image](https://github.com/user-attachments/assets/3e569101-c203-4b5b-b948-2f54cdfd4e4c)
@@ -616,7 +614,7 @@ Create our Flush Method within the ExtentFeatureReport class and also declare in
 ![image](https://github.com/user-attachments/assets/66dacd5b-0710-4427-b2b6-f86ced3add46)
 
 update AfterScenario within SpecflowBase class 
+![image](https://github.com/user-attachments/assets/4de7f93c-4a48-4a45-84bf-104a6b461641)
 
-![image](https://github.com/user-attachments/assets/27a2a9a4-de43-452c-b0ef-9bffc84b01a8)
 
  

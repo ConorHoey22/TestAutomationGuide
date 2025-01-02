@@ -12,7 +12,7 @@ namespace TestAutomationFramework.Core.WebUI.Abstraction
         string dataSetLocation { get; set; }
         string downloadedLocation { get; set; }
         string browsertype { get; set; }
-
+        bool stepscreenshot { get; set; }
         void Configuration();
     }
 }

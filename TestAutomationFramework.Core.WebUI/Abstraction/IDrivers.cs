@@ -12,5 +12,7 @@ namespace TestAutomationFramework.Core.WebUI.Abstraction
         IWebDriver GetWebDriver();
 
         void CloseBrowser();
+
+        string GetScreenshot();
     }
 }

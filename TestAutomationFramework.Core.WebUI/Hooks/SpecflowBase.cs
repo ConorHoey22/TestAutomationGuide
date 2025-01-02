@@ -16,7 +16,7 @@ namespace TestAutomationFramework.Core.WebUI.Hooks
     [Binding]
     public class SpecflowBase
     {
-        IGlobalProperties iglobalProperties;
+        IGlobalProperties _iglobalProperties;
         IChromeWebDriver _ichromeWebDriver;
         IFirefoxWebDriver _ifirefoxWebDriver;
         IDrivers _idrivers;
@@ -28,6 +28,7 @@ namespace TestAutomationFramework.Core.WebUI.Hooks
 
             _ichromeWebDriver = _chromeWebDriver;
             _ifirefoxWebDriver = _firefoxWebDriver;
+       
 
         }
 
@@ -41,7 +42,11 @@ namespace TestAutomationFramework.Core.WebUI.Hooks
             IExtentReport extentReport = (IExtentReport) fc["iextentreport"];
             extentReport.CreateScenario(scenarioContext.ScenarioInfo.Title);
 
+        
+
         }
+
+
 
         public void AfterStep(ScenarioContext scenarioContext, FeatureContext fc)
         {
@@ -49,11 +54,19 @@ namespace TestAutomationFramework.Core.WebUI.Hooks
             
             if(scenarioContext.TestError !=null)
             {
-                extentReport.Fail(scenarioContext.StepContext.StepInfo.Text);
+                string base64 = null;
+                base64 = _idrivers.GetScreenshot();
+                //extentReport.Fail(scenarioContext.StepContext.StepInfo.Text);
+                extentReport.Fail(scenarioContext.StepContext.StepInfo.Text, base64 );
             }
             else 
             {
-                extentReport.Pass(scenarioContext.StepContext.StepInfo.Text);    
+                string base64 = null;
+                if (_iglobalProperties.stepscreenshot)
+                {
+                    base64 = _idrivers.GetScreenshot();
+                }
+                extentReport.Pass(scenarioContext.StepContext.StepInfo.Text , base64);    
             }
         }
 
@@ -65,6 +78,8 @@ namespace TestAutomationFramework.Core.WebUI.Hooks
             Thread.Sleep(1000);
             _idrivers.CloseBrowser();
         }
+
+
 
     }
 }

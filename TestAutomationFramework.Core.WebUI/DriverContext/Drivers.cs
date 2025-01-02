@@ -65,5 +65,10 @@ namespace TestAutomationFramework.Core.WebUI.DriverContext
         {
             _iwebDriver.Quit();
         }
+
+        public string GetScreenshot()
+        {
+            return ((ITakesScreenshot)GetWebDriver()).GetScreenshot().AsBase64EncodedString;
+        }
     }
 }

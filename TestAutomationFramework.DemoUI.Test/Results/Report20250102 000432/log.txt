@@ -1,0 +1,9 @@
+2025-01-02 00:04:32.455 +00:00 [INF] Configuration Settings
+2025-01-02 00:04:32.455 +00:00 [INF] Browser: chrome
+2025-01-02 00:04:32.455 +00:00 [INF] Grid Hub Url : https://localhost:4444/wd/hub
+2025-01-02 00:04:32.455 +00:00 [INF] Step screenshot : False
+2025-01-02 00:04:32.455 +00:00 [INF] Extent report portal url : 
+2025-01-02 00:04:32.455 +00:00 [INF] Extent report portal  : False
+2025-01-02 00:04:32.455 +00:00 [INF] Log Level: 
+2025-01-02 00:04:32.455 +00:00 [INF] Data set location : \DataSetLocation
+2025-01-02 00:04:32.455 +00:00 [INF] Downloaded Location: \DataSetLocation

@@ -1,0 +1,1 @@
+2025-01-02 00:33:26.567 +00:00 [ERR] File does not exists.The configuration file 'Resources\FrameworkSettings.json' was not found and is not optional. The expected physical path was 'C:\Users\Conor\source\repos\TestSeleniumSpecFlow\TestAutomationFramework.Core.WebUI\bin\Debug\net6.0\Resources\FrameworkSettings.json'.

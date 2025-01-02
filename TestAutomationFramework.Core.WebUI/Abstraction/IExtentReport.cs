@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TestAutomationFramework.Core.WebUI.Abstraction
 {
@@ -10,9 +11,10 @@ namespace TestAutomationFramework.Core.WebUI.Abstraction
     {
         void CreateFeature(string featureName);
         void CreateScenario(string scenarioName);
-        void Pass(string msg);
-        void Fail(string msg);
-        void Warning(string msg);
-        void Fatal(string msg);
+        void Pass(string msg,string base64);
+        void Fail(string msg,string base64);
+        void Warning(string msg,string base64);
+        void Error(string msg,string base64) ;
+        void Fatal(string msg,string base64);
     }
 }

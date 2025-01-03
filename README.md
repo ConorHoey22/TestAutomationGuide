@@ -636,3 +636,7 @@ Create a GetScreenshot Method within our Driver class and also add to the interf
 
 AfterStep which uses IExtentReport  and will use our GetScreenshot Method which is inherted from Idriver
 ![image](https://github.com/user-attachments/assets/338b69cf-6be4-45ec-bbca-99c0648866a2)
+
+
+![image](https://github.com/user-attachments/assets/331f8083-a8eb-497c-8179-85f5ced37ad3)
+

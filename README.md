@@ -646,6 +646,15 @@ We can also set a scenario to FAIL if it meets certain conditions
 ![image](https://github.com/user-attachments/assets/59feba8a-649a-4330-bb50-f1963881788c)
 
 
+----------------------
+
+Creating a new test case  
+
+Create a Feature file within our Test Case Folder
+
+
+
+
 
 
 

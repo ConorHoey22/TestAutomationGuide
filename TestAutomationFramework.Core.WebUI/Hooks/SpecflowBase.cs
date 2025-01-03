@@ -47,26 +47,29 @@ namespace TestAutomationFramework.Core.WebUI.Hooks
         }
 
 
-
+        [AfterStep]
         public void AfterStep(ScenarioContext scenarioContext, FeatureContext fc)
         {
             IExtentReport extentReport = (IExtentReport)fc["iextentreport"];
-            
-            if(scenarioContext.TestError !=null)
+
+            if (scenarioContext.TestError != null)
             {
                 string base64 = null;
                 base64 = _idrivers.GetScreenshot();
-                //extentReport.Fail(scenarioContext.StepContext.StepInfo.Text);
-                extentReport.Fail(scenarioContext.StepContext.StepInfo.Text, base64 );
-            }
-            else 
+
+                extentReport.Fail(scenarioContext.StepContext.StepInfo.Text, base64);
+            } 
+            else
             {
+                IGlobalProperties iglobalProperties = SpecflowRunner._iserviceProvider.GetRequiredService<IGlobalProperties>();
                 string base64 = null;
-                if (_iglobalProperties.stepscreenshot)
+                if (iglobalProperties.stepscreenshot)
                 {
                     base64 = _idrivers.GetScreenshot();
                 }
-                extentReport.Pass(scenarioContext.StepContext.StepInfo.Text , base64);    
+
+                extentReport.Pass(scenarioContext.StepContext.StepInfo.Text, base64);
+         
             }
         }
 

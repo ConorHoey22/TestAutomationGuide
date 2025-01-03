@@ -616,5 +616,27 @@ Create our Flush Method within the ExtentFeatureReport class and also declare in
 update AfterScenario within SpecflowBase class 
 ![image](https://github.com/user-attachments/assets/4de7f93c-4a48-4a45-84bf-104a6b461641)
 
+AfterStep which uses IExtentReport  and will use our ITakescreenshot method 
+![image](https://github.com/user-attachments/assets/338b69cf-6be4-45ec-bbca-99c0648866a2)
 
- 
+Update frameworkSettings.json -> StepScreenshot
+![image](https://github.com/user-attachments/assets/41683c11-4586-4503-9054-3b0ac25b8d79)
+
+
+ExtentReport -> Create Methods for status and also using AventStack.ExtentReports.MediaEntityBuilder.CreateScreenCaptureFromBase64String(base64).Build());
+![image](https://github.com/user-attachments/assets/f8fdffa2-51fd-462b-b022-0808499578ea)
+
+IExtentReport -> Methods added to interface 
+![image](https://github.com/user-attachments/assets/6dd3a24f-9625-47c9-a89b-38c7b4825af8)
+
+Create a GetScreenshot Method within our Driver class and also add to the interface  
+![image](https://github.com/user-attachments/assets/3129eb9d-70f8-44e0-918b-865680050809)
+
+![image](https://github.com/user-attachments/assets/1be1a688-496d-4f23-965f-daeae9726917)
+
+AfterStep which uses IExtentReport  and will use our GetScreenshot Method which is inherted from Idriver
+![image](https://github.com/user-attachments/assets/338b69cf-6be4-45ec-bbca-99c0648866a2)
+
+
+![image](https://github.com/user-attachments/assets/331f8083-a8eb-497c-8179-85f5ced37ad3)
+

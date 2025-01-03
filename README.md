@@ -616,5 +616,7 @@ Create our Flush Method within the ExtentFeatureReport class and also declare in
 update AfterScenario within SpecflowBase class 
 ![image](https://github.com/user-attachments/assets/4de7f93c-4a48-4a45-84bf-104a6b461641)
 
+Update frameworkSettings.json -> StepScreenshot
+![image](https://github.com/user-attachments/assets/41683c11-4586-4503-9054-3b0ac25b8d79)
 
- 
+

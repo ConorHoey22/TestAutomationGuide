@@ -640,10 +640,8 @@ AfterStep which uses IExtentReport  and will use our GetScreenshot Method which 
 
 ![image](https://github.com/user-attachments/assets/331f8083-a8eb-497c-8179-85f5ced37ad3)
 
-
-We can also set a scenario to FAIL if it meets certain conditions and 
+We can also set a scenario to FAIL if it meets certain conditions 
 ![image](https://github.com/user-attachments/assets/e759e4f5-9795-4815-baca-70097d0f002a)
-
 
 ![image](https://github.com/user-attachments/assets/59feba8a-649a-4330-bb50-f1963881788c)
 

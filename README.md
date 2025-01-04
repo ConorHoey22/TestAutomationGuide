@@ -651,6 +651,36 @@ We can also set a scenario to FAIL if it meets certain conditions
 Creating a new test case  
 
 Create a Feature file within our Test Case Folder
+![image](https://github.com/user-attachments/assets/16c41ba8-7441-4a95-bd09-b8831b0befd3)
+
+![image](https://github.com/user-attachments/assets/9644edbe-2a7d-47b1-bf8a-cb1f3ebbd321)
+
+**Build project to auto create AddRemoveFromCart.cs file 
+
+Create Steps file 
+
+Right click feature file -> Define Steps 
+![image](https://github.com/user-attachments/assets/5be98749-d26a-4600-826e-047191fd9211)
+
+Copy to Clipboard and then create a new class ending in e.g. AddRemoveToCartSteps
+![image](https://github.com/user-attachments/assets/01f22406-6ae4-47ae-abf6-974bacab8ce3)
+
+Make your class public and include [Binding] which marks that this class contains step definitions and then paste steps within 
+![image](https://github.com/user-attachments/assets/03c5ad24-6889-4d8d-a697-80b2c57f7b15)
+
+
+
+Next we will create the new Class within our Page folder called AddRemoveFromCartPage which will contain the Selenium WebDriver instructions
+![image](https://github.com/user-attachments/assets/284da816-343c-446e-8eab-39e2a1971bca)
+
+First make your class public and Create a constructor 
+![image](https://github.com/user-attachments/assets/9fa2905c-565f-4751-8382-301e37a588a2)
+
+Next we will create our methods which we will use for each steps
+
+
+
+
 
 
 

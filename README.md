@@ -679,9 +679,10 @@ First make your class public and Create a constructor
 Next we will create our methods which we will use for each steps
 ![image](https://github.com/user-attachments/assets/258d7b10-9130-43fa-bf0b-68a683fe4c6c)
 
-inherit Iwebdriver and AtConfiguration interface which will be used in the methods 
+inherit IWebdriver and AtConfiguration interface which will be used in the methods 
 
-
+Within our Steps Class we will then call these methods created in out Page class by inheriting it in our Constructor and class 
+![image](https://github.com/user-attachments/assets/155f1ecd-a81a-4a03-822f-8913f4a5d812)
 
 
 

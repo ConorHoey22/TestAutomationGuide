@@ -677,6 +677,13 @@ First make your class public and Create a constructor
 ![image](https://github.com/user-attachments/assets/9fa2905c-565f-4751-8382-301e37a588a2)
 
 Next we will create our methods which we will use for each steps
+![image](https://github.com/user-attachments/assets/258d7b10-9130-43fa-bf0b-68a683fe4c6c)
+
+inherit Iwebdriver and AtConfiguration interface which will be used in the methods 
+
+
+
+
 
 
 

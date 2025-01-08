@@ -58,6 +58,7 @@ namespace TestAutomationFramework.DemoUi.Pages
             Username.SendKeys(username);
             Password.SendKeys(password);
             Login.Click();
+          
         }
     }
 }

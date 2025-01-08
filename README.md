@@ -687,7 +687,13 @@ Within our Steps Class we will then call these methods created in out Page class
 
 
 
+JENKINS 
 
+install Jenkins - https://www.jenkins.io/
+install the required Java JDK 
+Set up via localhost 
+
+Search http://localhost:8080/ once you are ready and install plugins 
 
 
 

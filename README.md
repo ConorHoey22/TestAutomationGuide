@@ -685,8 +685,7 @@ Within our Steps Class we will then call these methods created in out Page class
 ![image](https://github.com/user-attachments/assets/155f1ecd-a81a-4a03-822f-8913f4a5d812)
 
 
-
-
+-------------------------------------
 JENKINS 
 
 install Jenkins - https://www.jenkins.io/
@@ -694,6 +693,10 @@ install the required Java JDK
 Set up via localhost 
 
 Search http://localhost:8080/ once you are ready and install plugins 
+Create a Job and attach your github Repo to the Job 
+
+Create build steps to execute using Windows Batch command
+dotnet test
 
 
 

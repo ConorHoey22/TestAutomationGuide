@@ -684,6 +684,13 @@ inherit IWebdriver and AtConfiguration interface which will be used in the metho
 Within our Steps Class we will then call these methods created in out Page class by inheriting it in our Constructor and class 
 ![image](https://github.com/user-attachments/assets/155f1ecd-a81a-4a03-822f-8913f4a5d812)
 
+---- Pararell Execution 
+
+2 browsers at once to run scripts 
+Create a Assembly info file within DemoUI.test 
+![image](https://github.com/user-attachments/assets/065b37c3-f4b0-4558-9213-4dd64ed68a6d)
+
+
 
 -------------------------------------
 JENKINS 
